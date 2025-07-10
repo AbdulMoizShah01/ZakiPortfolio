@@ -1,0 +1,320 @@
+/* src/Components/Info.css */
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+.portfolio-container {
+  position: relative;
+  min-height: 100vh;
+  color: #333;
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pattern-diamond {
+  position: absolute;
+
+}
+
+.top-left {
+  top: 0%;
+  left: -10%;
+}
+
+.top-right {
+  top: 30%;
+  right: -10%;
+}
+
+.bottom-left {
+  bottom: -8%;
+  left: -10%;
+}
+
+.bottom-right {
+  bottom: 0%;
+  right: 5%;
+}
+
+.pattern-small {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.s1 {
+  top: 20%;
+  left: 15%;
+}
+
+.s2 {
+  top: 40%;
+  right: 20%;
+}
+
+.s3 {
+  bottom: 30%;
+  left: 25%;
+}
+
+.s4 {
+  bottom: 15%;
+  right: 15%;
+}
+
+.main-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+  padding: 2rem 0;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-container {
+  position: relative;
+}
+
+.profile-image {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+ 
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name-section {
+
+    background: #000000;
+    border-radius: 30px ;
+  text-align: center;
+  width: 100%;
+}
+
+.greeting {
+  background: #00000000;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.name-tag {
+  background-color: #ffffff;
+  padding: 0.1rem 4.2rem;
+  
+  border: solid 5px #000000;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.name-tag h1 {
+  font-family: "Birthstone";
+  font-size: 3.8rem;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+ 
+
+}
+
+.right-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  background: #000000;
+  padding:3rem 3rem;
+  font-size: 1.15rem;
+  border-radius: 30px;
+  line-height: 1.8;
+  color: #ffffff;
+  max-width: 700px;
+}
+
+.intro-paragraph {
+  font-size: 1.35rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.highlight {
+  background: linear-gradient(120deg, rgba(110, 142, 251, 0.2), rgba(167, 119, 227, 0.2));
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.awards-section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: left;
+  margin-top: 5rem;
+}
+
+.awards-container {
+  margin-top: -8%;
+  margin-left: 7%;
+  padding: 2rem 3rem;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.awards-header {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.awards-icon {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #000000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.awards-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+.award-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.award-description {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .left-section {
+    margin-bottom: 1rem;
+  }
+  
+  .name-tag h1 {
+    font-size: 3rem;
+  }
+  
+  .awards-section {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1.5rem;
+  }
+  
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .greeting {
+    font-size: 2rem;
+  }
+  
+  .name-tag h1 {
+    font-size: 2.5rem;
+  }
+  
+  .awards-container {
+    padding: 1.5rem;
+  }
+  
+  .awards-title {
+    font-size: 1.8rem;
+  }
+  
+  .award-title {
+    font-size: 1.25rem;
+  }
+  
+  .description {
+    font-size: 1.05rem;
+  }
+  
+  .intro-paragraph {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name-tag {
+    padding: 1rem 2rem;
+  }
+  
+  .name-tag h1 {
+    font-size: 2rem;
+  }
+  
+  .greeting {
+    font-size: 1.8rem;
+  }
+  
+  .awards-container {
+    padding: 1.25rem;
+  }
+  
+  .award-title {
+    font-size: 1.15rem;
+  }
+  
+  .award-description {
+    font-size: 1rem;
+  }
+}
