@@ -63,9 +63,13 @@ const PowerUpSelector = () => {
         ),
         tagline: "Crafting visual stories that captivate and inspire.",
         softwareIcons: [
-            <svg key="photoshop" viewBox="0 0 24 24" fill="currentColor" width="48" height="48" title="Adobe Photoshop"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.32 7.21c-.24-.13-.53-.19-.83-.19-.55 0-1.07.22-1.46.63l-1.07 1.07c-.1.1-.15.22-.15.35v3.54c0 .28.22.5.5.5h2.5c.28 0 .5-.22.5-.5v-2.5c0-.66-.26-1.29-.74-1.76zM8.5 7h3c.28 0 .5.22.5.5V10c0 .28-.22.5-.5.5h-3c-.28 0-.5-.22-.5-.5V7.5c0-.28.22-.5.5-.5z" /></svg>,
-            <svg key="illustrator" viewBox="0 0 24 24" fill="currentColor" width="48" height="48" title="Adobe Illustrator"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.5 15h-3v-9h3v9zm-6-4.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5zm9 0c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5z" /></svg>,
-            <svg key="indesign" viewBox="0 0 24 24" fill="currentColor" width="48" height="48" title="Adobe InDesign"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-8h2v8zm4 0h-2v-8h2v8z" /></svg>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 21.1795C28 22.9884 27.2814 24.7232 26.0023 26.0023C24.7232 27.2814 22.9884 28 21.1795 28H6.82051C5.0116 28 3.27678 27.2814 1.99768 26.0023C0.718588 24.7232 0 22.9884 0 21.1795V6.82051C0 5.0116 0.718588 3.27678 1.99768 1.99768C3.27678 0.718588 5.0116 0 6.82051 0H21.1795C22.9884 0 24.7232 0.718588 26.0023 1.99768C27.2814 3.27678 28 5.0116 28 6.82051V21.1795ZM6.82051 20.8205C6.5349 20.8205 6.26098 20.7071 6.05901 20.5051C5.85705 20.3031 5.74359 20.0292 5.74359 19.7436V8.25641C5.74359 7.97079 5.85705 7.69687 6.05901 7.49491C6.26098 7.29295 6.5349 7.17949 6.82051 7.17949H9.69231C10.7396 7.17949 11.7439 7.59551 12.4845 8.33604C13.225 9.07657 13.641 10.0809 13.641 11.1282C13.641 12.1755 13.225 13.1798 12.4845 13.9204C11.7439 14.6609 10.7396 15.0769 9.69231 15.0769H7.89744V19.7436C7.89744 20.0292 7.78397 20.3031 7.58201 20.5051C7.38005 20.7071 7.10613 20.8205 6.82051 20.8205ZM7.89744 12.9231H9.69231C10.1683 12.9231 10.6249 12.734 10.9615 12.3974C11.2981 12.0608 11.4872 11.6042 11.4872 11.1282C11.4872 10.6522 11.2981 10.1956 10.9615 9.85904C10.6249 9.52244 10.1683 9.33333 9.69231 9.33333H7.89744V12.9231ZM20.216 13.0451C20.2785 13.1728 20.3656 13.2868 20.4724 13.3806C20.5792 13.4744 20.7035 13.5462 20.8381 13.5917C20.9727 13.6373 21.115 13.6557 21.2568 13.646C21.3986 13.6363 21.5371 13.5986 21.6643 13.5351C21.7914 13.4716 21.9048 13.3836 21.9977 13.2761C22.0907 13.1686 22.1615 13.0438 22.206 12.9088C22.2505 12.7738 22.2678 12.6313 22.257 12.4896C22.2462 12.3479 22.2074 12.2097 22.143 12.0831C21.8376 11.4725 21.3683 10.959 20.7875 10.6001C20.2067 10.2412 19.5375 10.0512 18.8548 10.0513H18.3077C17.4508 10.0513 16.6291 10.3917 16.0232 10.9976C15.4173 11.6034 15.0769 12.4252 15.0769 13.2821C15.0769 14.1389 15.4173 14.9607 16.0232 15.5666C16.6291 16.1724 17.4508 16.5128 18.3077 16.5128H19.0256C19.3113 16.5128 19.5852 16.6263 19.7871 16.8282C19.9891 17.0302 20.1026 17.3041 20.1026 17.5897C20.1026 17.8754 19.9891 18.1493 19.7871 18.3512C19.5852 18.5532 19.3113 18.6667 19.0256 18.6667H18.4771C18.1949 18.6665 17.9182 18.5879 17.6781 18.4395C17.438 18.2912 17.2438 18.079 17.1173 17.8267C16.9884 17.5734 16.7647 17.3814 16.4948 17.2924C16.2249 17.2034 15.9308 17.2247 15.6765 17.3517C15.4223 17.4786 15.2285 17.7009 15.1375 17.9701C15.0464 18.2392 15.0654 18.5335 15.1904 18.7887C15.4956 19.3991 15.9647 19.9125 16.5452 20.2713C17.1257 20.6302 17.7947 20.8203 18.4771 20.8205H19.0256C19.8825 20.8205 20.7043 20.4801 21.3101 19.8742C21.916 19.2684 22.2564 18.4466 22.2564 17.5897C22.2564 16.7329 21.916 15.9111 21.3101 15.3052C20.7043 14.6994 19.8825 14.359 19.0256 14.359H19.0256C18.0221 14.359 17.7482 14.2455 17.5462 14.0436C17.3442 13.8416 17.2308 13.5677 17.2308 13.2821C17.2308 12.9964 17.3442 12.7225 17.5462 12.5206C17.7482 12.3186 18.0221 12.2051 18.3077 12.2051H18.8562C19.4306 12.2051 19.959 12.5311 20.216 13.0451Z" fill="black"/>
+</svg>,
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8983 12.1555L11.002 15.0169H13.984L13.0704 12.1555C12.8886 11.5836 12.7304 10.9552 12.5846 10.3801L12.4844 9.98364H12.4499C12.3914 10.2156 12.3318 10.4584 12.2712 10.7123C12.1553 11.1981 12.0346 11.7027 11.8983 12.1555Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.20855 0.45256C11.6556 -0.150853 17.1525 -0.150853 22.5996 0.45256C25.5753 0.784768 27.9744 3.12746 28.3239 6.1142C28.9694 11.6374 28.9694 17.217 28.3239 22.7403C27.9744 25.727 25.5753 28.0697 22.6011 28.4035C17.1536 29.007 11.6561 29.007 6.20855 28.4035C3.23278 28.0697 0.833675 25.727 0.48423 22.7418C-0.16141 17.2181 -0.16141 11.6379 0.48423 6.1142C0.833675 3.12746 3.23278 0.784768 6.20855 0.45256ZM20.5656 11.5173V19.9118H18.4282V11.5173H20.5656ZM18.3091 9.17302C18.3091 8.518 18.7901 8.01812 19.4969 8.01812C20.2224 8.01812 20.6706 8.518 20.6878 9.17302C20.6878 9.81079 20.2208 10.3107 19.4812 10.3107C18.7745 10.3107 18.3091 9.81079 18.3091 9.17302ZM15.3975 19.9118L14.3461 16.6195H10.6573L9.65755 19.9118H7.46843L11.1917 8.29392H13.8979L17.6729 19.9118H15.3975Z" fill="black"/>
+</svg>
         ]
       },
       'video-editing': {
@@ -220,44 +224,49 @@ const PowerUpSelector = () => {
 
   return (
     <Container>
-      <Header>
+    
+
+      <MainContent>
+        <LeftColumn>
+            <Header>
         <Title>SELECT YOUR</Title>
         <PowerUpTitle>
           POWER-UP<LoadingDots>{dots}</LoadingDots>
         </PowerUpTitle>
       </Header>
+          <SkillsGrid>
+            {Object.entries(skills).filter(([key]) => key !== 'default').map(([key, skill]) => (
+              <SkillItem key={key}>
+                <SkillCard 
+                  $selected={selectedSkill === key}
+                  onClick={() => setSelectedSkill(key)}
+                >
+                  <IconWrapper $selected={selectedSkill === key}>
+                    {skill.icon}
+                  </IconWrapper>
+                  {selectedSkill === key && (
+                    <SelectedBadge>
+                      <svg className="check" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                      </svg>
+                    </SelectedBadge>
+                  )}
+                </SkillCard>
+                <SkillName $selected={selectedSkill === key}>
+                  {skill.name}
+                </SkillName>
+              </SkillItem>
+            ))}
+          </SkillsGrid>
+        </LeftColumn>
 
-      <ContentWrapper>
-        <SkillsGrid onClick={(e) => e.stopPropagation()}>
-          {Object.entries(skills).filter(([key]) => key !== 'default').map(([key, skill]) => (
-            <SkillCard 
-              key={key}
-              $selected={selectedSkill === key}
-              onClick={() => setSelectedSkill(key)}
-            >
-              <IconWrapper $selected={selectedSkill === key}>
-                {skill.icon}
-              </IconWrapper>
-              <SkillName $selected={selectedSkill === key}>
-                {skill.name}
-              </SkillName>
-             
-              {selectedSkill === key && (
-                <SelectedBadge>
-                  <svg className="check" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                </SelectedBadge>
-              )}
-            </SkillCard>
-          ))}
-        </SkillsGrid>
-
-        <CharacterProfile onClick={(e) => e.stopPropagation()}>
+        <CenterColumn>
           <AvatarContainer>
             <Avatar skill={selectedSkill} />
           </AvatarContainer>
-         
+        </CenterColumn>
+
+        <RightColumn>
           <Stats>
             <StatTitle>{getDisplayTitle()}</StatTitle>
             <PersonalityList>
@@ -269,37 +278,34 @@ const PowerUpSelector = () => {
               ))}
             </PersonalityList>
           </Stats>
-        </CharacterProfile>
-      </ContentWrapper>
-      
-      <BottomSection>
-        {selectedSkill !== 'default' && (
-          <>
-            <SkillsHead>Skills</SkillsHead>
-            <SoftwareIcons>
-              {selectedSkillData.softwareIcons.map((icon, index) => (
-                <SoftwareIconWrapper key={index}>{icon}</SoftwareIconWrapper>
-              ))}
-            </SoftwareIcons>
-            <Tagline>{selectedSkillData.tagline}</Tagline>
-          
-          </>
-        )}
 
-        <CallToAction onClick={(e) => e.stopPropagation()}>
-          <CallToActionText>
-            Need a creative power-up for your Brand or Project?
-          </CallToActionText>
-          <CreateButton>
-            Let's Create
-          </CreateButton>
-        </CallToAction>
-      </BottomSection>
+          <BottomSection>
+            {selectedSkill !== 'default' && (
+              <>
+                <SkillsHead>Skills</SkillsHead>
+                <SoftwareIcons>
+                  {selectedSkillData.softwareIcons.map((icon, index) => (
+                    <SoftwareIconWrapper key={index}>{icon}</SoftwareIconWrapper>
+                  ))}
+                </SoftwareIcons>
+                <Tagline>{selectedSkillData.tagline}</Tagline>
+              </>
+            )}
+
+            <CallToAction>
+              <CallToActionText>
+                Need a creative power-up for your Brand or Project?
+              </CallToActionText>
+              <CreateButton>
+                Let's Create
+              </CreateButton>
+            </CallToAction>
+          </BottomSection>
+        </RightColumn>
+      </MainContent>
     </Container>
   );
 };
-
-// ... (Animations and most styled-components remain the same)
 
 // Animations
 const bounce = keyframes`
@@ -331,24 +337,35 @@ const fadeIn = keyframes`
 
 // Styled components
 const Container = styled.div`
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 30px 0;
+  background-color: #ffffffff;
 `;
 
 const Header = styled.div`
   text-align: left;
   margin-bottom: 40px;
-  max-width: 800px;
+  max-width: 100%;
+  padding: 0 5%;
+`;
+
+const MainContent = styled.div`
+  display: flex;
+  padding: 0 5%;
+  gap: 40px;
+  
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.h1`
-  margin-left: 5%;
   font-size: 3.5rem;
   font-weight: 900;
   color: #1e293b;
-  margin-bottom: -5%;
+  margin-bottom: 0;
   letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
  
@@ -358,7 +375,6 @@ const Title = styled.h1`
 `;
 
 const PowerUpTitle = styled.h2`
-  margin-left: 5%;
   font-size: 3.5rem;
   font-weight: 900;
   color: rgb(0, 0, 0);
@@ -381,39 +397,59 @@ const LoadingDots = styled.span`
   text-align: left;
 `;
 
-const ContentWrapper = styled.div`
-  margin-left: 10%;
-  margin-right: 10%;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 90px;
-  width: 80%;
-  margin-bottom: 2px;
-
+const LeftColumn = styled.div`
+  flex: 0 0 30%;
+  
   @media (max-width: 1200px) {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
+    width: 100%;
+  }
+`;
+
+const CenterColumn = styled.div`
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  @media (max-width: 1200px) {
+    order: -1;
+    margin-bottom: 40px;
+  }
+`;
+
+const RightColumn = styled.div`
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  
+  @media (max-width: 1200px) {
+    width: 100%;
   }
 `;
 
 const SkillsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+`;
+
+const SkillItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const SkillCard = styled.div`
   background: ${props => props.$selected ? '#dbeafe' : 'white'};
-  border: 3px solid ${props => props.$selected ? '#3b82f6' : '#cbd5e1'};
-  height:150px;
+  border: 3px solid ${props => props.$selected ? '#000000ff' : '#cbd5e1'};
+  height: 120px;
+  width: 120px;
   border-radius: 16px;
-  padding: 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -421,97 +457,77 @@ const SkillCard = styled.div`
  
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2);
-    border-color: ${props => props.$selected ? '#3b82f6' : '#94a3b8'};
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: ${props => props.$selected ? '#000000ff' : '#000000ff'};
   }
 `;
 
 const IconWrapper = styled.div`
-  width: 100px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
  
   .icon {
-    width: 40px;
-    height: 40px;
-    color: ${props => props.$selected ? '#3b82f6' : '#475569'};
+    width: 100px;
+    height: 100px;
+    color: ${props => props.$selected ? '#000000ff' : '#000000ff'};
     transition: all 0.3s ease;
   }
 `;
 
 const SkillName = styled.div`
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-align: center;
-  color: ${props => props.$selected ? '#1e40af' : '#334155'};
+  color: ${props => props.$selected ? '#000000ff' : '#000000ff'};
   transition: all 0.3s ease;
+  padding: 10px 0;
+  width: 100%;
 `;
 
 const SelectedBadge = styled.div`
   position: absolute;
-  top: -10px;
-  right: -10px;
-  width: 10px;
-  height: 30px;
-  background: #3b82f6;
+  top: 5px;
+  right: 5px;
+  background: #000000ff;
   border-radius: 50%;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: ${scaleIn} 0.3s ease-out;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5);
- 
-  .check {
-    width: 16px;
-    height: 16px;
-    color: white;
-  }
+  color: white;
 `;
 
-const CharacterProfile = styled.div`
-  background: white;
-  border-radius: 24px;
-  padding: 1px;
-  display: flex;
-  flex-direction: row;
-  height: fit-content;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-`;
 
 const AvatarContainer = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
 `;
 
 const AvatarImage = styled.img`
   width: 300px;
-  height: 550px;
-  padding-right:20px;
-  border-radius: 20px;
+  height: 600px;
   object-fit: contain;
   transition: all 0.3s ease;
-
+  
   @media (max-width: 768px) {
     width: 250px;
     height: auto;
-    padding-right: 0;
-    margin-bottom: 20px;
   }
 `;
 
 const Stats = styled.div`
-  width: 40%;
+  width: 450px;
+  height: fit-content;
+  flex: 1;
   background: rgb(2, 2, 2);
   border-radius: 16px;
   padding: 20px;
+  margin-bottom: 4px;
 `;
 
 const StatTitle = styled.h3`
@@ -536,8 +552,8 @@ const PersonalityList = styled.ul`
 const PersonalityItem = styled.li`
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 20px;
+  margin-bottom: 10px;
   color: #e2e8f0;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -547,27 +563,20 @@ const Bullet = styled.span`
   color: rgb(255, 255, 255);
   font-weight: bold;
   flex-shrink: 0;
-  margin-top: 5px;
+  margin-top: 1px;
 `;
 
 const BottomSection = styled.div`
-  margin-top:-1%;
-  margin-left: 55%;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  width: 30%;
-  gap: 20px;
-
-  @media (max-width: 768px) {
-    width: 90%;
-  }
+  gap: 2px;
+  width: 100%;
 `;
 
 const SkillsHead = styled.h2`
-color: black;
-font-size:2.5rem;
-margin-bottom: 0;
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
 `;
 
 const Tagline = styled.p`
@@ -582,6 +591,7 @@ const SoftwareIcons = styled.div`
   display: flex;
   justify-content: left;
   gap: 20px;
+  margin-bottom: 5px;
   animation: ${fadeIn} 0.5s ease 0.2s;
   animation-fill-mode: both;
 `;
@@ -591,48 +601,43 @@ const SoftwareIconWrapper = styled.div`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #3b82f6;
+    color: #000000ff;
   }
 `;
 
 const CallToAction = styled.div`
   text-align: left;
   width: 100%;
-  padding: 1px;
+  padding: 2px;
   background: white;
   border-radius: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-
-  @media (max-width: 768px) {
-    padding: 20px;
-  }
+  margin-top: 20px;
 `;
 
 const CallToActionText = styled.p`
   color: #475569;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-size: 1.05rem;
   line-height: 1.5;
 `;
 
 const CreateButton = styled.button`
-  
+  background: transparent;
   color: black;
-  border: solid;
+  border: 3px solid black;
   border-radius: 12px;
-  padding: 14px 5px;
+  padding: 14px 30px;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  width:40%;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   
- 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
-    animation:none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: black;
+    color: white;
   }
 `;
 

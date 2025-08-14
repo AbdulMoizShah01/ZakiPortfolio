@@ -1,266 +1,180 @@
-/* src/components/CoinInsertGame.css */
-.coin-insert-game {
-  min-height: 50vh;
+/* Corner decorations */
+.corner-decoration {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  border-right: none;
+  border-top: none;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  border-left: none;
+  border-top: none;
+}
+
+.coin-slot-section {
+  position: relative;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
+  background-color: #ffffff;
+  padding: 2rem;
   overflow: hidden;
 }
 
-.game-container {
-  position: relative;
-  left: 50px;
-  width: 60%;
-  height: 200px;
-  overflow: hidden;
+.main-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  z-index: 10;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
 }
 
-.coin-area {
-  position: relative;
-  width: 40%;
-  height: 100%;
+.animation-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  gap: 15rem;
+  position: relative;
+}
+
+.coin-container {
+  position: relative;
 }
 
 .coin {
-  cursor: grab;
-  transition: transform 0.3s ease, opacity 0.5s ease;
-  position: absolute;
-  z-index: 10;
-  left: 30;
-  top: 5;
+  transition: all 2s ease-out;
+  transform-origin: center;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-.coin.dragging {
-  cursor: grabbing;
-  transform: scale(1.1) rotate(5deg);
-  z-index: 20;
-}
-
-.coin.inserted {
+.coin.animate {
+  transform: translateX(400px) translateY(80px) scale(0.6);
   opacity: 0;
-  transform: scale(0.8) translateY(100px);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.box-area {
+.slot-container {
   position: relative;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
 }
 
-.box {
+.slot-box {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+.text-container {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #000000;
+  text-align: left;
+  min-width: 150px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.text-content {
   position: relative;
-  z-index: 5;
+}
+
+.text-initial,
+.text-final {
+  transition: all 1s ease-in-out;
+}
+
+.text-initial {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-final {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
   transform: translateY(20px);
 }
 
-.slot-highlight {
-  position: absolute;
-  top: 30px;
-  width: 60px;
-  height: 8px;
-  background: rgba(255, 215, 0, 0.6);
-  border-radius: 4px;
-  animation: slot-pulse 2s infinite;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+.text-content.animated .text-initial {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
-.text-area {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.text-content.animated .text-final {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.insert-text {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #333;
-  line-height: 1.4;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transition: all 0.5s ease;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.insert-text span {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #0b0b0b;
-}
-
-.insert-text .play-text {
-  display: inline-block;
-  position: relative;
-  color: #070707;
-  transition: all 0.3s ease;
-}
-
-.insert-text.animate-play .play-text::after {
-  transform: scaleX(1);
-}
-
-.insert-text.lets-play {
-  color: #27ae60;
-}
-
-.insert-text.lets-play .play-text {
-  animation: play-pulse 0.8s ease-in-out;
-  color: #ffd700;
-}
-
-.success-animation {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 15;
-}
-
-.success-icon {
-  font-size: 6rem;
-  right: 60px;
-  animation: bounce 1s ease-in-out;
-}
-
-.decorative-svg {
-  position: absolute;
-  opacity: 0.2;
-  z-index: 1;
-  transition: transform 0.3s ease-out;
-  pointer-events: none;
-}
-
-.left-decor {
-  top: 2%;
-  left: -8%;
-}
-
-.right-decor {
-  top: -4%;
-  right: -8%;
-}
-.right-center-decor {
-  top: 40%;
-  right: 2%;
-}
-
-.left-top {
-  top: 10%;
-  animation: float 12s ease-in-out infinite;
-}
-
-.left-bottom {
-  bottom: 10%;
-  animation: float 10s ease-in-out infinite reverse;
-}
-
-.right-top {
-  top: 10%;
-  animation: float 14s ease-in-out infinite reverse;
-}
-
-.right-bottom {
-  bottom: 10%;
-  animation: float 8s ease-in-out infinite;
-}
-
-.instructions {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  color: #7f8c8d;
-  font-size: 1rem;
-  max-width: 300px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 10px 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-
-/* Animations */
-@keyframes slot-pulse {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.3; }
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
-}
-
-@keyframes play-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-@keyframes float {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
-  100% { transform: translateY(0) rotate(0deg); }
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .game-container {
+/* Responsive design */
+@media (max-width: 768px) {
+  .coin-slot-section {
     flex-direction: column;
-    height: auto;
-    padding: 2rem;
-    gap: 3rem;
+    text-align: center;
+    padding: 1rem;
   }
-  
-  .coin-area, 
-  .box-area, 
-  .text-area {
-    width: 100%;
-    padding-bottom: 2rem;
-  }
-  
-  .text-area {
+
+  .main-container {
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
+  }
+
+  .coin.animate {
+    transform: translateY(120px) scale(0.6);
+  }
+
+  .animation-container {
+    gap: 5rem;
+  }
+
+  .text-container {
+    margin-top: 2rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   
-  .insert-text {
-    font-size: 1.5rem;
-  }
-  
-  .decorative-svg {
-    display: none;
+  .corner-decoration {
+    width: 30px;
+    height: 30px;
   }
 }
 
-@media (max-width: 768px) {
-  .game-container {
-    padding: 1rem;
+/* Hover effect for desktop */
+@media (min-width: 769px) {
+  .coin-slot-section:hover .coin {
+    transform: translateX(400px) translateY(80px) scale(0.6);
+    opacity: 0;
+    transition-delay: 0s;
   }
-  
-  .insert-text {
-    font-size: 1.3rem;
+
+  .coin-slot-section:hover .text-content .text-initial {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .insert-text span {
-    font-size: 1.8rem;
+
+  .coin-slot-section:hover .text-content .text-final {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -5,6 +5,7 @@ import PortfolioBanner from "./Components/PortfolioBanner"
 import PowerUpSelector from "./Components/PowerUpSelector"
 import TopBar from "./Components/TopBar"
 import SplashScreen from "./Components/SplashScreen"
+import WorkSection from './Components/WorkSection';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <CoinMachine/>
           <Info/>
           <PowerUpSelector/>
+          <WorkSection/>
         </>
       )}
     </>

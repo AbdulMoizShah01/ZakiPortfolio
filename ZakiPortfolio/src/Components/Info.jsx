@@ -255,7 +255,7 @@ const Info = () => {
         <div className="awards-container">
           <div className="awards-header">
             <div className="awards-icon">
-              <span>🏆</span>
+              <span></span>
             </div>
             <h2 className="awards-title">Awards</h2>
           </div>
