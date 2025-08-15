@@ -6,7 +6,7 @@ import PowerUpSelector from "./Components/PowerUpSelector"
 import TopBar from "./Components/TopBar"
 import SplashScreen from "./Components/SplashScreen"
 import WorkSection from './Components/WorkSection';
-
+import ProfileCard from './Components/ProfileCard';
 function App() {
 
   const [showSplash, setShowSplash] = useState(true);
@@ -23,6 +23,7 @@ function App() {
           <Info/>
           <PowerUpSelector/>
           <WorkSection/>
+          <ProfileCard/>
         </>
       )}
     </>

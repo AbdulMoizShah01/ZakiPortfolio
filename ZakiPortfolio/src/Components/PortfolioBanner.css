@@ -39,7 +39,7 @@
 
 .top-logo-container {
   position: absolute;
-  top: 20px;
+  top: 150px;
   z-index: 2;
   animation: float 6s ease-in-out infinite;
 }
