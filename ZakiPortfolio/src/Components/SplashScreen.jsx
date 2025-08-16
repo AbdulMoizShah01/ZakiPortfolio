@@ -8,6 +8,8 @@ const SplashScreen = ({ onClose }) => {
   
   const greetings = [
     { text: "Hello", language: "English" },
+    { text: "नमस्ते", language: "Hindi" },
+     { text: "مرحبا", language: "Arabic" },
     { text: "Hola", language: "Spanish" },
     { text: "Bonjour", language: "French" },
     { text: "Ciao", language: "Italian" },
@@ -15,8 +17,8 @@ const SplashScreen = ({ onClose }) => {
     { text: "こんにちは", language: "Japanese" },
     { text: "안녕하세요", language: "Korean" },
     { text: "你好", language: "Chinese" },
-    { text: "नमस्ते", language: "Hindi" },
-    { text: "مرحبا", language: "Arabic" },
+    
+   
     { text: "Olá", language: "Portuguese" },
     { text: "Привет", language: "Russian" },
     { text: "Merhaba", language: "Turkish" },

@@ -30,12 +30,12 @@ const CoinInsertGame = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="coin-slot-section">
-      {/* Corner Decorations */}
-      <div className="corner-decoration top-left"></div>
-      <div className="corner-decoration top-right"></div>
-      <div className="corner-decoration bottom-left"></div>
-      <div className="corner-decoration bottom-right"></div>
+      <div className="coin-slot-section" ref={sectionRef}>
+      {/* Corner Decorations - updated with consistent styling */}
+      <div className="cornerdeco tl"><img src='/Assets/Decor.svg' alt="corner decoration"/></div>
+      <div className="cornerdeco tr"><img src='/Assets/Decor.svg' alt="corner decoration"/></div>
+      <div className="cornerdeco bl"><img src='/Assets/Decor.svg' alt="corner decoration"/></div>
+      <div className="cornerdeco br"><img src='/Assets/Decor.svg' alt="corner decoration"/></div>
       
       <div className="main-container">
         <div className="animation-container">

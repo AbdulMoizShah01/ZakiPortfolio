@@ -1,82 +1,32 @@
 import React, { useState } from 'react';
-import '../Components/WorkSection.css';
+import './WorkSection.css';
 
 const WorkSection = () => {
   const [activeCategory, setActiveCategory] = useState('Everything');
-  const [categoryIndex, setCategoryIndex] = useState(0);
   
-  // Sample project data
+  // Updated project data with navigation URLs
   const projects = [
-    {
-      id: 1,
-      title: "Kosher - Hair Care Tools",
-      category: "Web Design",
-      image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop",
-      description: "Modern e-commerce platform for hair care products"
-    },
-    {
-      id: 2,
-      title: "VGB-14 T-Shirt Design",
-      category: "Branding",
-      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop",
-      description: "Custom t-shirt design for gaming community"
-    },
-    {
-      id: 3,
-      title: "Character Illustration",
-      category: "Illustration",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-      description: "Digital character design and illustration"
-    },
-    {
-      id: 4,
-      title: "Robot Animation",
-      category: "Animation",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
-      description: "3D robot character animation project"
-    },
-    {
-      id: 5,
-      title: "Minecraft Scene",
-      category: "3D",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop",
-      description: "Custom 3D scene recreation in Minecraft style"
-    },
-    {
-      id: 6,
-      title: "SABAR Comic",
-      category: "Illustration",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-      description: "Comic book illustration and character design"
-    },
-    {
-      id: 7,
-      title: "VGB-14 Logo",
-      category: "Branding",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop",
-      description: "Logo design for gaming brand"
-    },
-    {
-      id: 8,
-      title: "Mobile App UI",
-      category: "Web Design",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-      description: "Clean mobile app interface design"
-    },
-    {
-      id: 9,
-      title: "Corporate Identity",
-      category: "Branding",
-      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=300&fit=crop",
-      description: "Complete brand identity package"
-    },
-    {
-      id: 10,
-      title: "Digital Portrait",
-      category: "Illustration",
-      image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=300&fit=crop",
-      description: "Realistic digital portrait illustration"
-    }
+    { id: 1, title: "Kosher - Hair Care Tools", category: "Web Design", 
+      image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop", 
+      url: "/projects/kosher-hair-care" },
+    { id: 2, title: "VGB-14 T-Shirt Design", category: "Branding", 
+      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop", 
+      url: "/projects/vgb14-tshirt" },
+    { id: 3, title: "Character Illustration", category: "Illustration", 
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop", 
+      url: "/projects/character-illustration" },
+    { id: 4, title: "Robot Animation", category: "Animation", 
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop", 
+      url: "/projects/robot-animation" },
+    { id: 5, title: "Minecraft Scene", category: "3D", 
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop", 
+      url: "/projects/minecraft-scene" },
+    { id: 6, title: "SABAR Comic", category: "Illustration", 
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop", 
+      url: "/projects/sabar-comic" },
+    { id: 7, title: "VGB-14 Logo", category: "Branding", 
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop", 
+      url: "/projects/vgb14-logo" }
   ];
 
   const categories = ['Everything', 'Web Design', 'Branding', 'Illustration', 'Animation', '3D'];
@@ -85,25 +35,17 @@ const WorkSection = () => {
     ? projects 
     : projects.filter(project => project.category === activeCategory);
 
-  // Handle project click - would navigate to project detail page
-  const handleProjectClick = (project) => {
-    console.log(`Navigating to project: ${project.title}`);
-    alert(`Would navigate to ${project.title} details page`);
-  };
-
   // Handle category navigation with arrows
   const handlePrevCategory = () => {
     const currentIndex = categories.indexOf(activeCategory);
     const prevIndex = (currentIndex - 1 + categories.length) % categories.length;
     setActiveCategory(categories[prevIndex]);
-    setCategoryIndex(prevIndex);
   };
 
   const handleNextCategory = () => {
     const currentIndex = categories.indexOf(activeCategory);
     const nextIndex = (currentIndex + 1) % categories.length;
     setActiveCategory(categories[nextIndex]);
-    setCategoryIndex(nextIndex);
   };
 
   // Get category icons
@@ -151,89 +93,118 @@ const WorkSection = () => {
   };
 
   return (
-    <div className="portfolio-container">
-      <div className="browser-frame">
-        {/* Browser Header */}
-        <div className="browser-header">
-          <div className="browser-controls">
-            <div className="control-btn close"></div>
-            <div className="control-btn minimize"></div>
-            <div className="control-btn maximize"></div>
+ 
+      <div className="work-container">
+        <div className="bg-pattern">
+          <div className="p-diamond t-l">
+            <img src='/Assets/Decor.svg' alt="Diamond decoration"/>
           </div>
-          
-          <div className="nav-arrows">
-            <button className="nav-arrow" onClick={handlePrevCategory}>{"<"}</button>
-            <button className="nav-arrow" onClick={handleNextCategory}>{">"}</button>
+          <div className="p-diamond t-r">
+            <img src='/Assets/Decor.svg' alt="Diamond decoration"/>
           </div>
-          
-          <div className="address-bar">
-            <svg className="folder-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M10 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2h-8l-2-2z"/>
-            </svg>
-            <span className="page-title">Work</span>
+          <div className="p-diamond b-l">
+            <img src='/Assets/Decor.svg' alt="Diamond decoration"/>
+          </div>
+          <div className="p-diamond b-r">
+            <img src='/Assets/Decor.svg' alt="Diamond decoration"/>
           </div>
         </div>
-
-        <div className="main-content">
-          {/* Sidebar */}
-          <div className="sidebar">
-            <div className="sidebar-nav">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`category-button ${activeCategory === category ? 'active' : ''}`}
-                >
-                  {getCategoryIcon(category)}
-                  <span>{category}</span>
-                  {category !== 'Everything' && (
-                    <span className="category-count">
-                      {projects.filter(p => p.category === category).length}
-                    </span>
-                  )}
-                </button>
-              ))}
+        
+        <div className="browser-frame">
+          {/* Browser Header */}
+          <div className="browser-header">
+            <div className="browser-controls">
+              <div className="control-btn close"></div>
+              <div className="control-btn minimize"></div>
+              <div className="control-btn maximize"></div>
+            </div>
+            
+            <div className="nav-arrows">
+              <button className="nav-arrow" onClick={handlePrevCategory} aria-label="Previous category">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                </svg>
+              </button>
+              <button className="nav-arrow" onClick={handleNextCategory} aria-label="Next category">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                </svg>
+              </button>
+            </div>
+            
+            <div className="address-bar">
+              <svg className="folder-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2h-8l-2-2z"/>
+              </svg>
+              <span className="page-title">Work</span>
             </div>
           </div>
 
-          {/* Main Content */}
-          <div className="content-area">
-            <div className="project-grid">
-              {filteredProjects.map((project) => (
-                <div
-                  key={project.id}
-                  className="project-card"
-                  onClick={() => handleProjectClick(project)}
-                >
-                  <div className="image-container">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="project-image"
-                    />
-                    <div className="overlay">
-                      <h3 className="overlay-title">{project.title}</h3>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          <div className="main-content">
+            {/* Sidebar */}
+            <div className="sidebar">
+              <div className="sidebar-nav">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setActiveCategory(category)}
+                    className={`category-button ${activeCategory === category ? 'active' : ''}`}
+                    aria-pressed={activeCategory === category}
+                  >
+                    {getCategoryIcon(category)}
+                    <span>{category}</span>
+                    {category !== 'Everything' && (
+                      <span className="category-count">
+                        {projects.filter(p => p.category === category).length}
+                      </span>
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            {filteredProjects.length === 0 && (
-              <div className="empty-state">
-                <div className="empty-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                <h3 className="empty-title">No projects found</h3>
-                <p className="empty-text">Try selecting a different category</p>
+            {/* Main Content */}
+            <div className="content-area">
+              <div className="project-grid">
+                {filteredProjects.map((project) => (
+                  // Converted to anchor tag for navigation
+                  <a
+                    key={project.id}
+                    href={project.url}
+                    className="project-card"
+                    aria-label={`View ${project.title} project`}
+                  >
+                    <div className="image-container">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="project-image"
+                        loading="lazy"
+                      />
+                      <div className="overlay">
+                        <h3 className="overlay-title">{project.title}</h3>
+                      </div>
+                    </div>
+                  </a>
+                ))}
               </div>
-            )}
+
+              {filteredProjects.length === 0 && (
+                <div className="empty-state">
+                  <div className="empty-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  </div>
+                  <h3 className="empty-title">No projects found</h3>
+                  <p className="empty-text">Try selecting a different category</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+  
   );
 };
 

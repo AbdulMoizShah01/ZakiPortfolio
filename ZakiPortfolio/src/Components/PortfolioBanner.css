@@ -62,7 +62,7 @@
 }
 
 .left-svg {
-  top: 5%;
+  top: 10%;
   left: 0%;
   transform: translateY(-50%);
   animation: float 8s ease-in-out infinite;

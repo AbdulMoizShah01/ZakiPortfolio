@@ -1,10 +1,11 @@
 /* src/Components/Info.css */
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
 .portfolio-container {
   position: relative;
   min-height: 100vh;
-  color: #333;
-  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #ffffff;
   overflow-x: hidden;
   padding: 2rem;
   display: flex;
@@ -21,6 +22,7 @@
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
+  opacity: 0.5;
 }
 
 .pattern-diamond {
@@ -48,33 +50,7 @@
   right: 5%;
 }
 
-.pattern-small {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-}
 
-.s1 {
-  top: 20%;
-  left: 15%;
-}
-
-.s2 {
-  top: 40%;
-  right: 20%;
-}
-
-.s3 {
-  bottom: 30%;
-  left: 25%;
-}
-
-.s4 {
-  bottom: 15%;
-  right: 15%;
-}
 
 .main-content {
   position: relative;
@@ -112,13 +88,14 @@
 
 .name-section {
 
-    background: #000000;
-    border-radius: 30px ;
+  background: #000000;
+  border-radius: 30px ;
   text-align: center;
   width: 100%;
 }
 
 .greeting {
+  font-family: "Big Shoulders", sans-serif;
   background: #00000000;
   font-size: 2rem;
   font-weight: 400;
@@ -153,9 +130,11 @@
 }
 
 .description {
+  font-family: "Big Shoulders", sans-serif;
   background: #000000;
   padding:3rem 3rem;
-  font-size: 1.15rem;
+  font-weight: 100;
+  font-size: 1.5rem;
   border-radius: 30px;
   line-height: 1.8;
   color: #ffffff;
@@ -163,14 +142,15 @@
 }
 
 .intro-paragraph {
-  font-size: 1.35rem;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  font-weight: 500;
+  font-weight: 100;
   color: #ffffff;
 }
 
 .highlight {
-  background: linear-gradient(120deg, rgba(110, 142, 251, 0.2), rgba(167, 119, 227, 0.2));
+  font-family: "Big Shoulders", sans-serif;
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
   font-weight: 600;
@@ -187,12 +167,11 @@
 }
 
 .awards-container {
-  margin-top: -8%;
-  margin-left: 7%;
-  padding: 2rem 3rem;
+  margin-top: -20%;
+  padding: 1rem 1rem;
   max-width: 450px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   
 }
 
@@ -213,6 +192,7 @@
 }
 
 .awards-title {
+  font-family: "Big Shoulders", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
@@ -221,17 +201,19 @@
 }
 
 .award-title {
-  font-size: 1.1rem;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #000000;
 }
 
 .award-description {
+  font-family: "Big Shoulders", sans-serif;
   font-size: 1rem;
   color: #666;
   margin: 0;
-  font-style: italic;
+
 }
 
 /* Responsive design */

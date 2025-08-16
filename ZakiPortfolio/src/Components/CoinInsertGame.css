@@ -1,42 +1,45 @@
 /* Corner decorations */
-.corner-decoration {
+.cornerdeco {
   position: absolute;
-  width: 40px;
-  height: 40px;
   z-index: 1;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 1;
 }
 
-.top-left {
-  top: 20px;
-  left: 20px;
-  border-right: none;
-  border-bottom: none;
+.cornerdeco img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.top-right {
-  top: 20px;
-  right: 20px;
-  border-left: none;
-  border-bottom: none;
+.tl {
+  top: 0;
+  left: -140px;
 }
 
-.bottom-left {
-  bottom: 20px;
-  left: 20px;
-  border-right: none;
-  border-top: none;
+.tr {
+  top: 0;
+  right: -150px;
 }
 
-.bottom-right {
-  bottom: 20px;
-  right: 20px;
-  border-left: none;
-  border-top: none;
+.bl {
+  bottom: 28%;
+  left: 85%;
+}
+
+.br {
+  bottom: 50%;
+  right: 50%;
 }
 
 .coin-slot-section {
   position: relative;
-  min-height: 30vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +144,7 @@
   }
 
   .coin.animate {
-    transform: translateY(120px) scale(0.6);
+    transform: translateY(150px) scale(0);
   }
 
   .animation-container {
@@ -163,14 +166,14 @@
 /* Hover effect for desktop */
 @media (min-width: 769px) {
   .coin-slot-section:hover .coin {
-    transform: translateX(400px) translateY(80px) scale(0.6);
+    transform: translateX(400px) translateY(10px) scale(0.8);
     opacity: 0;
     transition-delay: 0s;
   }
 
   .coin-slot-section:hover .text-content .text-initial {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(0px);
   }
 
   .coin-slot-section:hover .text-content .text-final {

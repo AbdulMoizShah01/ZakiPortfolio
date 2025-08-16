@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import CoinMachine from "./Components/CoinMachine"
-import Info from "./Components/Info"
-import PortfolioBanner from "./Components/PortfolioBanner"
-import PowerUpSelector from "./Components/PowerUpSelector"
-import TopBar from "./Components/TopBar"
-import SplashScreen from "./Components/SplashScreen"
-import WorkSection from './Components/WorkSection';
-import ProfileCard from './Components/ProfileCard';
+import { useState } from "react";
+import { Routes, Route } from 'react-router-dom';
+import SplashScreen from "./Components/SplashScreen";
+import TopBar from "./Components/TopBar";
+import Footer from "./Components/Footer";
+import HomePage from "./Pages/HomePage";
+
 function App() {
 
   const [showSplash, setShowSplash] = useState(true);
@@ -18,12 +16,10 @@ function App() {
       ) : (
         <>
           <TopBar/>
-          <PortfolioBanner/>
-          <CoinMachine/>
-          <Info/>
-          <PowerUpSelector/>
-          <WorkSection/>
-          <ProfileCard/>
+          <Routes>
+            <Route path="/" element={<HomePage/>} />
+          </Routes>
+          <Footer/>
         </>
       )}
     </>
@@ -31,4 +27,4 @@ function App() {
 }
 
 
-export default App
+export default App;

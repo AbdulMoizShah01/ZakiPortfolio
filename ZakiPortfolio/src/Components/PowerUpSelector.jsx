@@ -337,6 +337,8 @@ const fadeIn = keyframes`
 
 // Styled components
 const Container = styled.div`
+  margin-top: 2rem;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -362,10 +364,10 @@ const MainContent = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: #1e293b;
-  margin-bottom: 0;
+  margin-bottom: -7%;
   letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
  
@@ -375,7 +377,7 @@ const Title = styled.h1`
 `;
 
 const PowerUpTitle = styled.h2`
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: rgb(0, 0, 0);
   position: relative;
