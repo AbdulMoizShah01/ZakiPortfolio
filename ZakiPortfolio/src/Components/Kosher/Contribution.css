@@ -1,0 +1,78 @@
+ @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+ .contribution-section {
+        
+        margin-left: 15%;
+        max-width: 400px;
+        font-family: "Big Shoulders", sans-serif;
+        color: #000000;
+        line-height: 1.6;
+        }
+
+        .section-header {
+          margin-bottom: 16px;
+        }
+
+        .section-header h3 {
+          font-size: 25px;
+          font-weight: 600;
+        
+          letter-spacing: 0.5px;
+          margin: 0;
+          padding: 6px 12px;
+          background-color: #ffffff;
+          border: 2px solid #000000;
+          border-radius: 12px;
+          display: inline-block;
+        }
+
+        .contribution-list {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 32px 0;
+        }
+
+        .contribution-list li {
+          font-size: 20px;
+          margin-bottom: 6px;
+          padding-left: 12px;
+          position: relative;
+        }
+
+        .contribution-list li::before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          color: #333;
+          font-weight: bold;
+        }
+
+        .software-icons {
+          display: flex;
+          gap: 12px;
+          margin-top: 16px;
+        }
+
+        .software-icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          font-size: 16px;
+          color: white;
+          border: 2px solid #000000;
+        }
+
+        .ps-icon {
+          background-color: #000000;
+        }
+
+        .ai-icon {
+          background-color: #000000;
+        }
+
+        .software-icon span {
+          font-family: 'Adobe Clean', -apple-system, BlinkMacSystemFont, sans-serif;
+        }

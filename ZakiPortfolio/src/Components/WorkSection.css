@@ -1,13 +1,16 @@
-/*WorkSection.css*/
-.work-container {
+/* WorkSection.css */
+.ws-work-container {
   background-color: #ffffff;
   padding: 24px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.bg-pattern {
+.ws-bg-pattern {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,62 +21,66 @@
   pointer-events: none;
 }
 
-.p-diamond {
+.ws-p-diamond {
   position: absolute;
   width: 200px;
   height: 200px;
   opacity: 1;
 }
 
-.t-l {
+.ws-t-l {
   top: 0%;
   left: -10%;
 }
 
-.t-r {
+.ws-t-r {
   top: 30%;
   right: 10%;
 }
 
-.b-l {
+.ws-b-l {
   bottom: 8%;
   left: -10%;
 }
 
-.b-r {
+.ws-b-r {
   bottom: 12%;
   right: -2%;
 }
 
-.browser-frame {
-  max-width: 1000px;
+.ws-browser-frame {
+  width: 1000px;
+  height: 850px;
   margin: 0 auto;
   background-color: white;
-  border: solid 5px  #000000;
+  border: solid 5px #000000;
   border-radius: 40px;
   overflow: hidden;
-  flex-shrink: 0;
   position: relative;
   z-index: 10;
- 
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 /* Browser Header */
-.browser-header {
+.ws-browser-header {
   background-color: #f9fafb;
   padding: 12px 24px;
   border-bottom: 5px solid #000000;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 
-.browser-controls {
+.ws-browser-controls {
   display: flex;
   gap: 8px;
 }
 
-.control-btn {
+.ws-control-btn {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -81,27 +88,26 @@
   cursor: pointer;
 }
 
-.control-btn.close {
+.ws-control-btn.ws-close {
   background-color: #000000;
 }
 
-.control-btn.minimize {
+.ws-control-btn.ws-minimize {
   background-color: #707070;
 }
 
-.control-btn.maximize {
+.ws-control-btn.ws-maximize {
   background-color: #adadad;
 }
 
-.nav-arrows {
+.ws-nav-arrows {
   display: flex;
   gap: 8px;
 }
 
-.nav-arrow {
+.ws-nav-arrow {
   width: 30px;
   height: 30px;
-
   background-color: #ffffff;
   border: solid 2px black;
   border-radius: 4px;
@@ -113,11 +119,11 @@
   transition: background-color 0.2s;
 }
 
-.nav-arrow:hover {
+.ws-nav-arrow:hover {
   background-color: #d1d5db;
 }
 
-.address-bar {
+.ws-address-bar {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -125,39 +131,42 @@
   margin-right: auto;
 }
 
-.folder-icon {
+.ws-folder-icon {
   width: 24px;
   height: 24px;
 }
 
-.page-title {
+.ws-page-title {
   font-weight: 900;
   color: #000000;
   font-size: 1.25rem;
 }
 
 /* Main Layout */
-.main-content {
+.ws-main-content {
   display: flex;
+  flex: 1;
+  overflow: hidden;
 }
 
 /* Sidebar */
-.sidebar {
-  margin-top: -32px;
+.ws-sidebar {
   width: 280px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   flex-shrink: 0;
   border-right: 3px solid #000000;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
-.sidebar-nav {
+.ws-sidebar-nav {
   border: 1px solid #000;
   border-radius: 0px;
   overflow: hidden;
 }
 
-.category-button {
+.ws-category-button {
   width: 100%;
   text-align: left;
   padding: 12px 16px;
@@ -171,34 +180,34 @@
   margin-bottom: 0;
   border-bottom: 2px solid #000;
   border-radius: 0;
+  box-sizing: border-box;
 }
 
-.category-button:last-child {
+.ws-category-button:last-child {
   border-bottom: none;
 }
 
-.category-button.active {
+.ws-category-button.ws-active {
   background-color: #000000;
   color: white;
 }
 
-.category-button:not(.active) {
+.ws-category-button:not(.ws-active) {
   background-color: transparent;
   color: #000000;
 }
 
-.category-button:not(.active):hover {
+.ws-category-button:not(.ws-active):hover {
   background-color: #f3f4f6;
 }
 
-.category-icon {
+.ws-category-icon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
 }
 
-.category-count {
-  top: 0;
+.ws-category-count {
   margin-left: auto;
   font-size: 12px;
   background-color: #374151;
@@ -207,73 +216,62 @@
   border-radius: 12px;
 }
 
-.category-button.active .category-count {
+.ws-category-button.ws-active .ws-category-count {
   background-color: #4b5563;
 }
 
 /* Content Area */
-.content-area {
-  margin-top: -35px;
-  margin-left: -64px;
+.ws-content-area {
   flex: 1;
-
   background-color: #ffffff;
-  flex-shrink: 0;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
-.project-grid {
+.ws-project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  flex-shrink: 0;
-}
-
-/* Responsive Grid */
-@media (max-width: 1280px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
+  gap: 20px;
+  width: 100%;
+  height: fit-content;
 }
 
 /* Project Cards */
-.project-card {
+.ws-project-card {
   position: relative;
   background-color: white;
   border: solid 1px #000000;
   overflow: hidden;
   cursor: pointer;
-  flex-shrink: 0;
   transition: all 0.3s ease;
+  aspect-ratio: 1;
 }
 
-.project-card:hover {
+.ws-project-card:hover {
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
 }
 
-.image-container {
-  aspect-ratio: 1;
+.ws-image-container {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
-.project-image {
+.ws-project-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.project-card:hover .project-image {
+.ws-project-card:hover .ws-project-image {
   transform: scale(1.05);
 }
 
-.overlay {
+.ws-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
@@ -284,11 +282,11 @@
   justify-content: center;
 }
 
-.project-card:hover .overlay {
+.ws-project-card:hover .ws-overlay {
   opacity: 1;
 }
 
-.overlay-title {
+.ws-overlay-title {
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
@@ -297,112 +295,107 @@
 }
 
 /* Empty State */
-.empty-state {
+.ws-empty-state {
   text-align: center;
   padding: 48px 0;
   grid-column: 1 / -1;
 }
 
-.empty-icon {
+.ws-empty-icon {
   width: 64px;
   height: 64px;
   color: #9ca3af;
   margin: 0 auto 16px;
 }
 
-.empty-title {
+.ws-empty-title {
   font-size: 20px;
   font-weight: 600;
   color: #4b5563;
   margin-bottom: 8px;
 }
 
-.empty-text {
+.ws-empty-text {
   color: #6b7280;
   max-width: 400px;
   margin: 0 auto;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 1024px) {
-  .portfolio-container {
-    padding: 16px;
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .ws-browser-frame {
+    width: 95%;
+    height: auto;
+    min-height: 600px;
   }
   
-  .browser-header {
-    padding: 12px 16px;
-    gap: 12px;
-  }
-  
-  .sidebar {
-    width: 220px;
-  }
-  
-  .content-area {
-    padding: 24px 16px;
-  }
-  
-  .overlay-title {
-    font-size: 16px;
+  .ws-project-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .main-content {
+  .ws-work-container {
+    padding: 16px;
+  }
+  
+  .ws-main-content {
     flex-direction: column;
   }
   
-  .sidebar {
+  .ws-sidebar {
     width: 100%;
-    padding: 16px;
     border-right: none;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 3px solid #000000;
   }
   
-  .sidebar-nav {
-    padding: 0;
+  .ws-sidebar-nav {
     display: flex;
     overflow-x: auto;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
   }
   
-  .category-button {
-    padding: 10px 16px;
-    white-space: nowrap;
-    border-bottom: none;
+  .ws-category-button {
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+    border-bottom: 2px solid #000;
     border-right: 1px solid #000;
   }
   
-  .category-button:last-child {
+  .ws-category-button:last-child {
     border-right: none;
   }
   
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .ws-content-area {
+    padding: 16px;
+  }
+  
+  .ws-project-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .project-grid {
-    grid-template-columns: 1fr;
+  .ws-browser-header {
+    padding: 12px 16px;
   }
   
-  .browser-header {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
+  .ws-browser-frame {
+    border-radius: 20px;
   }
   
-  .address-bar {
-    margin: 8px 0 0;
-    width: 100%;
-    justify-content: center;
+  .ws-nav-arrows {
+    display: none;
   }
   
-  .nav-arrows {
-    margin-left: auto;
+  .ws-category-button {
+    min-width: 120px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  
+  .ws-category-icon {
+    width: 16px;
+    height: 16px;
   }
 }

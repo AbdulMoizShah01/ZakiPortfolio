@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+.banner-container {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 0 20px;
+}
+
+.ki-banner-container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 0 20px;
+}
+
+.back-button {
+  position: absolute;
+  left: 250px;
+  top: 20px;
+  z-index: 10;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 9rem auto;
+}
+
+.heading {
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 999;
+  font-size: 5rem;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.image-container {
+  position: absolute;
+  top: 230%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+}
+
+
+.image-container-kbid {
+  position: absolute;
+  top: 245%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+}
+
+
+.image-container-td {
+  position: absolute;
+  top: 245%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: fit-content;
+}
+.image-container img {
+  width: 100%;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .back-button {
+    left: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    left: 20px;
+  }
+  
+  .banner-container {
+    padding: 0 10px;
+    margin-top: 80px;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    padding: 15px;
+  }
+  
+  .image-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    position: static;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+  
+  .banner-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .image-container {
+    width: 95%;
+  }
+}
