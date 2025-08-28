@@ -7,6 +7,8 @@ import HomePage from "./Pages/HomePage";
 import Kosherwave from "./Pages/Kosherwave";
 import KhanaBadoshBid from "./Pages/KhanaBadoshBid";
 import Ddrawing from "./Pages/2Ddrawing";
+import Jugaad3D from "./Pages/Jugaad3D";
+import Jojo2D from "./Pages/Jojo2D";
 
 
 function App() {
@@ -25,6 +27,9 @@ function App() {
             <Route path="/kosherwave" element={<Kosherwave/>} />
             <Route path="/khanabadosh-brand-id" element={<KhanaBadoshBid/>} />
             <Route path="/2d-digital-drawing" element={<Ddrawing/>} />
+            <Route path="/jugaad3d" element={<Jugaad3D/>} />
+            <Route path="/jojo-gym-2d" element={<Jojo2D/>} />
+
           </Routes>
           <Footer/>
         </>

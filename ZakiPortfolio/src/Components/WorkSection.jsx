@@ -6,22 +6,22 @@ const WorkSection = () => {
   
   // Updated project data with navigation URLs
   const projects = [
-    { id: 1, title: "Kosher - Hair Care Tools", category: "Web Design", 
-      image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop", 
+    { id: 1, title: "Kosher - Hair Care Tools", category: "2D", 
+      image: "/Kosher/cover6.png", 
       url: "/kosherwave" },
-    { id: 2, title: "VGB-14 T-Shirt Design", category: "Branding", 
-      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop", 
+    { id: 2, title: "KhanaBadosh Brand Identity", category: "2D", 
+      image: "/KhanabadoshID/kbidwork.png", 
       url: "/khanabadosh-brand-id" },
-    { id: 3, title: "Character Illustration", category: "Illustration", 
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop", 
+    { id: 3, title: "2D Digital Drawing", category: "2D", 
+      image: "2D/P4.png", 
       url: "/2d-digital-drawing" },
-    { id: 4, title: "Robot Animation", category: "Animation", 
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop", 
-      url: "/projects/robot-animation" },
-    { id: 5, title: "Minecraft Scene", category: "3D", 
+    { id: 4, title: "Jugaad 3D Animaton", category: "Animation",
+      image: "Jugaad/JugaadBanner.png", 
+      url: "/jugaad3d" },
+    { id: 5, title: "Jojo Gymkhana 2D Animation", category: "3D", 
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop", 
-      url: "/projects/minecraft-scene" },
-    { id: 6, title: "SABAR Comic", category: "Illustration", 
+      url: "/jojo-gym-2d" },
+    { id: 6, title: "SABAR Comic", category: "Animaton",
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop", 
       url: "/projects/sabar-comic" },
     { id: 7, title: "VGB-14 Logo", category: "Branding", 
@@ -29,7 +29,7 @@ const WorkSection = () => {
       url: "/projects/vgb14-logo" }
   ];
 
-  const categories = ['Everything', 'Web Design', 'Branding', 'Illustration', 'Animation', '3D'];
+  const categories = ['Everything', '2D', '3D', 'Animation'];
   
   const filteredProjects = activeCategory === 'Everything' 
     ? projects 
@@ -56,23 +56,12 @@ const WorkSection = () => {
           <path d="M12 2L2 7v10c0 1.1.9 2 2 2h16c1.11 0 2-.9 2-2V7l-10-5zM12 4.84L19 8.16V17h-2v-6h-3v6h-4v-6H7v6H5V8.16L12 4.84z"/>
         </svg>
       ),
-      'Web Design': (
+      '2D': (
         <svg viewBox="0 0 24 24" fill="currentColor" className="ws-category-icon">
           <path d="M20 3H4c-1.1 0-1.99.9-1.99 2L2 19c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM4 6h16v2H4V6zm0 5h16v8H4v-8z"/>
           <circle cx="6.5" cy="13.5" r="1"/>
           <circle cx="9.5" cy="13.5" r="1"/>
           <circle cx="12.5" cy="13.5" r="1"/>
-        </svg>
-      ),
-      'Branding': (
-        <svg viewBox="0 0 24 24" fill="currentColor" className="ws-category-icon">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      ),
-      'Illustration': (
-        <svg viewBox="0 0 24 24" fill="currentColor" className="ws-category-icon">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-          <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
         </svg>
       ),
       'Animation': (

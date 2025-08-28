@@ -14,7 +14,7 @@ function Ddrawing (){
      <div className="app-container">
       {/* Left Border */}
       <div className="border-svg left-border">
-       <img src='/KhanabadoshID/Sideline-left.svg'/>
+       <img src='/2D/2DSideline-left.svg'/>
       </div>
 
       {/* Main Content */}
@@ -30,7 +30,7 @@ function Ddrawing (){
 
       {/* Right Border */}
       <div className="border-svg right-border">
-       <img src='/KhanabadoshID/Sideline-right.svg'/>
+       <img src='/2D/2DSideline-right.svg'/>
       </div>
     </div>
     </>
