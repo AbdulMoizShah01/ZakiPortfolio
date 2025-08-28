@@ -61,7 +61,16 @@
   height: 800px;
 }
 
-
+.ka-image-container {
+  position: absolute;
+  top: 300%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+}
 .image-container-kbid {
   position: absolute;
   top: 245%;
@@ -84,6 +93,8 @@
   max-width: 700px;
   height: fit-content;
 }
+
+
 .image-container img {
   width: 100%;
   display: block;
