@@ -1,8 +1,8 @@
 /* Updated PortfolioBanner.css */
 .banner {
   position: relative;
-  margin-top: 5rem;;
-  height: 100vh;
+  margin-top: 5rem;
+  min-height: 100vh; /* Changed from height to min-height for better flexibility */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   position: absolute;
   top: 70px;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 91%;
   z-index: -1;
 }
@@ -25,7 +25,7 @@
 .gif-background {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover; /* Changed from fill to cover for better aspect ratio maintenance */
 }
 
 .gif-overlay {
@@ -34,7 +34,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  
 }
 
 .top-logo-container {
@@ -51,9 +50,6 @@
   max-width: 90%;
 }
 
-
-
-
 .decorative-svg {
   position: absolute;
   opacity: 0.7;
@@ -67,8 +63,6 @@
   transform: translateY(-50%);
   animation: float 8s ease-in-out infinite;
 }
-
-
 
 /* Animations */
 @keyframes float {
@@ -110,37 +104,116 @@
   100% { transform: scale(1); }
 }
 
-/* Responsive adjustments */
+/* Medium devices (tablets, 768px and below) */
 @media (max-width: 768px) {
+  .banner {
+    margin-top: 4rem;
+    min-height: 80vh; /* Reduced height for medium screens */
+  }
+  
+  .gif-container {
+    top: 60px;
+    height: 85%;
+  }
+  
+  .top-logo-container {
+    top: 120px;
+  }
+  
+  .top-logo-container svg {
+    width: 70px;
+    height: 70px;
+  }
+  
   .main-title {
-    font-size: 4rem;
+    font-size: 3.5rem; /* Adjusted for medium screens */
   }
   
   .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* Adjusted for medium screens */
   }
   
   .left-svg, .right-svg {
-    display: none;
+    display: none; /* Hide decorative elements on medium screens */
+  }
+  
+  .cta-button {
+    padding: 14px 35px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Small devices (phones, 480px and below) */
+@media (max-width: 480px) {
+  .banner {
+    margin-top: 3rem;
+    min-height: 70vh; /* Further reduced height for small screens */
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+  
+  .gif-container {
+    top: 50px;
+    height: 80%;
+  }
+  
+  .gif-background {
+    object-fit: contain; /* Change to contain on very small screens */
+  }
+  
+  .top-logo-container {
+    position: relative;
+    top: 0;
+    margin-bottom: 1.5rem;
   }
   
   .top-logo-container svg {
     width: 60px;
     height: 60px;
   }
-}
-
-@media (max-width: 480px) {
+  
   .main-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
   }
   
   .subtitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  
+  .banner-content {
+    padding: 0 15px;
+    max-width: 95%;
   }
   
   .cta-button {
     padding: 12px 30px;
     font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Extra small devices (phones, 360px and below) */
+@media (max-width: 360px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Large devices (desktops, 1200px and above) */
+@media (min-width: 1200px) {
+  .banner-content {
+    max-width: 1200px;
   }
 }

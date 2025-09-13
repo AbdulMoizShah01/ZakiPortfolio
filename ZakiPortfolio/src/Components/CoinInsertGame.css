@@ -181,3 +181,186 @@
     transform: translateY(0);
   }
 }
+
+
+
+   /* Responsive design */
+        @media (max-width: 1200px) {
+            .animation-container {
+                gap: 10rem;
+            }
+            
+            .coin.animate {
+                transform: translateX(300px) translateY(60px) scale(0.6);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .main-title {
+                font-size: 4rem;
+            }
+            
+            .subtitle {
+                font-size: 1.8rem;
+            }
+            
+            .animation-container {
+                gap: 8rem;
+            }
+            
+            .coin.animate {
+                transform: translateX(250px) translateY(50px) scale(0.6);
+            }
+            
+            .text-container {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                margin-top: 4rem;
+                min-height: 80vh;
+            }
+            
+            .gif-container {
+                top: 60px;
+                height: 85%;
+            }
+            
+            .top-logo-container {
+                top: 120px;
+            }
+            
+            .logo {
+                width: 80px;
+                height: 80px;
+                font-size: 1.2rem;
+            }
+            
+            .main-title {
+                font-size: 3.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .cornerdeco::before {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .coin-slot-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 3rem 1.5rem;
+            }
+
+            .main-container {
+                flex-direction: column;
+                gap: 2.5rem;
+                align-items: center;
+            }
+
+            .animation-container {
+                gap: 6rem;
+            }
+
+            .coin.animate {
+                transform: translateX(200px) translateY(40px) scale(0.6);
+            }
+
+            .text-container {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+                text-align: center;
+                min-width: auto;
+            }
+            
+            .cta-button {
+                padding: 14px 35px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .main-title {
+                font-size: 2.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .animation-container {
+                gap: 4rem;
+            }
+            
+            .coin {
+                width: 60px;
+                height: 60px;
+                font-size: 1rem;
+            }
+            
+            .slot-box {
+                width: 90px;
+                height: 110px;
+            }
+            
+            .coin.animate {
+                transform: translateX(150px) translateY(30px) scale(0.6);
+            }
+            
+            .text-container {
+                font-size: 1.3rem;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .cornerdeco::before {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .tl::before {
+                transform: rotate(45deg) translate(-45px, -45px);
+            }
+            
+            .tr::before {
+                transform: rotate(-45deg) translate(45px, -45px);
+            }
+            
+            .bl::before {
+                transform: rotate(-135deg) translate(-45px, 45px);
+            }
+            
+            .br::before {
+                transform: rotate(135deg) translate(45px, 45px);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .animation-container {
+                gap: 3rem;
+            }
+            
+            .coin.animate {
+                transform: translateX(120px) translateY(25px) scale(0.6);
+            }
+            
+            .text-container {
+                font-size: 1.1rem;
+            }
+            
+            .main-title {
+                font-size: 2.3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }

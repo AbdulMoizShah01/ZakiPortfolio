@@ -308,6 +308,7 @@ const PowerUpSelector = () => {
 };
 
 // Animations
+// Animations
 const bounce = keyframes`
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -351,6 +352,11 @@ const Header = styled.div`
   margin-bottom: 40px;
   max-width: 100%;
   padding: 0 5%;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 `;
 
 const MainContent = styled.div`
@@ -360,6 +366,12 @@ const MainContent = styled.div`
   
   @media (max-width: 1200px) {
     flex-direction: column;
+    gap: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0 3%;
+    gap: 20px;
   }
 `;
 
@@ -371,8 +383,18 @@ const Title = styled.h1`
   letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
  
+  @media (max-width: 992px) {
+    margin-bottom: -5%;
+  }
+ 
   @media (max-width: 768px) {
     font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
 
@@ -385,6 +407,12 @@ const PowerUpTitle = styled.h2`
  
   @media (max-width: 768px) {
     font-size: 2.5rem;
+    text-align: center;
+    display: block;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
 
@@ -397,6 +425,13 @@ const LoadingDots = styled.span`
   width: 30px;
   display: inline-block;
   text-align: left;
+  
+  @media (max-width: 768px) {
+    position: static;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
 `;
 
 const LeftColumn = styled.div`
@@ -404,6 +439,7 @@ const LeftColumn = styled.div`
   
   @media (max-width: 1200px) {
     width: 100%;
+    order: 2;
   }
 `;
 
@@ -414,8 +450,9 @@ const CenterColumn = styled.div`
   align-items: flex-start;
   
   @media (max-width: 1200px) {
-    order: -1;
-    margin-bottom: 40px;
+    order: 1;
+    width: 100%;
+    margin-bottom: 30px;
   }
 `;
 
@@ -426,6 +463,7 @@ const RightColumn = styled.div`
   
   @media (max-width: 1200px) {
     width: 100%;
+    order: 3;
   }
 `;
 
@@ -434,6 +472,16 @@ const SkillsGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   width: 100%;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 `;
 
 const SkillItem = styled.div`
@@ -462,6 +510,19 @@ const SkillCard = styled.div`
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-color: ${props => props.$selected ? '#000000ff' : '#000000ff'};
   }
+  
+  @media (max-width: 768px) {
+    height: 110px;
+    width: 110px;
+  }
+  
+  @media (max-width: 480px) {
+    height: 100px;
+    width: 100px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 15px;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -477,6 +538,10 @@ const IconWrapper = styled.div`
     color: ${props => props.$selected ? '#000000ff' : '#000000ff'};
     transition: all 0.3s ease;
   }
+  
+  @media (max-width: 480px) {
+    margin-right: 10px;
+  }
 `;
 
 const SkillName = styled.div`
@@ -487,6 +552,12 @@ const SkillName = styled.div`
   transition: all 0.3s ease;
   padding: 10px 0;
   width: 100%;
+  
+  @media (max-width: 480px) {
+    text-align: left;
+    padding: 0;
+    font-size: 0.85rem;
+  }
 `;
 
 const SelectedBadge = styled.div`
@@ -501,8 +572,15 @@ const SelectedBadge = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
+  
+  @media (max-width: 480px) {
+    top: 3px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
 `;
-
 
 const AvatarContainer = styled.div`
   display: flex;
@@ -516,9 +594,18 @@ const AvatarImage = styled.img`
   object-fit: contain;
   transition: all 0.3s ease;
   
+  @media (max-width: 1200px) {
+    height: 500px;
+  }
+  
   @media (max-width: 768px) {
     width: 250px;
-    height: auto;
+    height: 450px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 200px;
+    height: 400px;
   }
 `;
 
@@ -530,6 +617,16 @@ const Stats = styled.div`
   border-radius: 16px;
   padding: 20px;
   margin-bottom: 4px;
+  
+  @media (max-width: 1200px) {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 15px;
+    border-radius: 12px;
+  }
 `;
 
 const StatTitle = styled.h3`
@@ -542,6 +639,11 @@ const StatTitle = styled.h3`
   @media (max-width: 768px) {
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
   }
 `;
 
@@ -559,6 +661,16 @@ const PersonalityItem = styled.li`
   color: #e2e8f0;
   font-size: 0.95rem;
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    gap: 15px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    gap: 10px;
+  }
 `;
 
 const Bullet = styled.span`
@@ -573,12 +685,25 @@ const BottomSection = styled.div`
   flex-direction: column;
   gap: 2px;
   width: 100%;
+  
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
 `;
 
 const SkillsHead = styled.h2`
   color: black;
   font-size: 2.5rem;
   margin-bottom: 5px;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const Tagline = styled.p`
@@ -587,6 +712,15 @@ const Tagline = styled.p`
   font-weight: 600;
   text-align: left;
   animation: ${fadeIn} 0.5s ease;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const SoftwareIcons = styled.div`
@@ -596,6 +730,16 @@ const SoftwareIcons = styled.div`
   margin-bottom: 5px;
   animation: ${fadeIn} 0.5s ease 0.2s;
   animation-fill-mode: both;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
 `;
 
 const SoftwareIconWrapper = styled.div`
@@ -604,6 +748,10 @@ const SoftwareIconWrapper = styled.div`
 
   &:hover {
     color: #000000ff;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -614,6 +762,11 @@ const CallToAction = styled.div`
   background: white;
   border-radius: 24px;
   margin-top: 20px;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+    padding: 0 10px;
+  }
 `;
 
 const CallToActionText = styled.p`
@@ -621,6 +774,14 @@ const CallToActionText = styled.p`
   margin-bottom: 5px;
   font-size: 1.05rem;
   line-height: 1.5;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const CreateButton = styled.button`
@@ -640,6 +801,17 @@ const CreateButton = styled.button`
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     background: black;
     color: white;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    width: 100%;
   }
 `;
 

@@ -216,87 +216,209 @@
 
 }
 
-/* Responsive design */
-@media (max-width: 992px) {
-  .main-content {
-    flex-direction: column;
-    gap: 3rem;
-  }
-  
-  .left-section {
-    margin-bottom: 1rem;
-  }
-  
-  .name-tag h1 {
-    font-size: 3rem;
-  }
-  
-  .awards-section {
-    margin-top: 3rem;
-  }
-}
+  /* Responsive design */
+        @media (max-width: 1200px) {
+            .main-content {
+                gap: 3rem;
+            }
+            
+            .profile-image {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .awards-container {
+                margin-top: -15%;
+            }
+        }
 
-@media (max-width: 768px) {
-  .portfolio-container {
-    padding: 1.5rem;
-  }
-  
-  .profile-image {
-    width: 180px;
-    height: 180px;
-  }
-  
-  .greeting {
-    font-size: 2rem;
-  }
-  
-  .name-tag h1 {
-    font-size: 2.5rem;
-  }
-  
-  .awards-container {
-    padding: 1.5rem;
-  }
-  
-  .awards-title {
-    font-size: 1.8rem;
-  }
-  
-  .award-title {
-    font-size: 1.25rem;
-  }
-  
-  .description {
-    font-size: 1.05rem;
-  }
-  
-  .intro-paragraph {
-    font-size: 1.2rem;
-  }
-}
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .left-section {
+                margin-bottom: 1rem;
+            }
+            
+            .name-tag h1 {
+                font-size: 3rem;
+            }
+            
+            .awards-section {
+                margin-top: 3rem;
+                justify-content: center;
+            }
+            
+            .awards-container {
+                margin-top: 0;
+            }
+            
+            .pattern-diamond {
+                width: 120px;
+                height: 120px;
+            }
+        }
 
-@media (max-width: 480px) {
-  .name-tag {
-    padding: 1rem 2rem;
-  }
-  
-  .name-tag h1 {
-    font-size: 2rem;
-  }
-  
-  .greeting {
-    font-size: 1.8rem;
-  }
-  
-  .awards-container {
-    padding: 1.25rem;
-  }
-  
-  .award-title {
-    font-size: 1.15rem;
-  }
-  
-  .award-description {
-    font-size: 1rem;
-  }
-}
+        @media (max-width: 768px) {
+            .portfolio-container {
+                padding: 1.5rem;
+            }
+            
+            .profile-image {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .greeting {
+                font-size: 1.8rem;
+            }
+            
+            .name-tag {
+                padding: 0.1rem 2.5rem;
+            }
+            
+            .name-tag h1 {
+                font-size: 2.8rem;
+            }
+            
+            .description {
+                padding: 2rem;
+                font-size: 1.3rem;
+            }
+            
+            .awards-container {
+                padding: 1.5rem;
+            }
+            
+            .awards-title {
+                font-size: 1.8rem;
+            }
+            
+            .award-title {
+                font-size: 1.3rem;
+            }
+            
+            .pattern-diamond {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .top-left {
+                left: -15%;
+            }
+            
+            .top-right {
+                right: -15%;
+            }
+            
+            .bottom-left {
+                left: -15%;
+            }
+            
+            .bottom-right {
+                right: -5%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-container {
+                padding: 1rem;
+            }
+            
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .name-section {
+                padding: 1rem;
+            }
+            
+            .greeting {
+                font-size: 1.6rem;
+            }
+            
+            .name-tag {
+                padding: 0.1rem 2rem;
+            }
+            
+            .name-tag h1 {
+                font-size: 2.3rem;
+            }
+            
+            .description {
+                padding: 1.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .intro-paragraph {
+                font-size: 1.2rem;
+            }
+            
+            .awards-container {
+                padding: 1.25rem;
+            }
+            
+            .awards-title {
+                font-size: 1.6rem;
+            }
+            
+            .award-title {
+                font-size: 1.2rem;
+            }
+            
+            .award-description {
+                font-size: 0.9rem;
+            }
+            
+            .pattern-diamond {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .top-left {
+                left: -20%;
+            }
+            
+            .top-right {
+                right: -20%;
+            }
+            
+            .bottom-left {
+                bottom: -10%;
+                left: -20%;
+            }
+            
+            .bottom-right {
+                right: -10%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .name-tag h1 {
+                font-size: 2rem;
+            }
+            
+            .greeting {
+                font-size: 1.4rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+                padding: 1.2rem;
+            }
+            
+            .awards-title {
+                font-size: 1.4rem;
+            }
+            
+            .award-title {
+                font-size: 1.1rem;
+            }
+            
+            .pattern-diamond {
+                display: none;
+            }
+        }
