@@ -1,4 +1,4 @@
-import "./CoinSVG.css";
+import "./CoinSvg.css";
 const CoinSVG = ({ isAnimated }) => (
   <svg viewBox="0 0 235 234" fill="none" xmlns="http://www.w3.org/2000/svg" className={`coin ${isAnimated ? 'animate' : ''}`}>
     <path d="M166.637 47V66.6732L124.677 167.498H166.637V187.582H102V167.908L143.96 67.0831H104.019V47H166.637Z" fill="black"/>
