@@ -30,12 +30,12 @@ function ScrollToHashElement() {
 }
 
 function App() {
-  const [showSplash, setShowSplash] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
 
   return (
     <>
       {showSplash ? (
-        <SplashScreen onClose={() => setShowSplash(true)} />
+        <SplashScreen onClose={() => setShowSplash(false)} />
       ) : (
         <>
         
