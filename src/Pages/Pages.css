@@ -1,0 +1,54 @@
+/* Kosherwave.css */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.border-svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 400px;
+  width: 40px; /* Adjust based on your SVG width */
+  z-index: 5;
+  pointer-events: none; /* Allows clicks through SVG */
+}
+
+.left-border {
+  left: 0;
+}
+
+.right-border {
+  right: 75px;
+}
+
+.content {
+  font-family: "Big Shoulders", sans-serif;
+  flex: 1;
+  padding: 2rem;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .border-svg {
+    width: 60px;
+  }
+  
+  .content {
+    margin: 0 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .border-svg {
+    display: none; /* Hide borders on small screens */
+  }
+  
+  .content {
+    margin: 0;
+  }
+}

@@ -1,0 +1,92 @@
+.phases-container {
+  max-width: 900px;
+  margin: 5rem auto;
+  position: relative;
+}
+
+.phases-header {
+  background-color: white;
+  position: relative;
+}
+
+.phases-label {
+  z-index: 2;
+  position: absolute;
+  top: -12px;
+  left: 50px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 1px 8px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+.phases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.phase-item {
+  position: relative;
+  background-color: #000000;
+}
+
+.phase-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+  .phases-container {
+    margin: 3rem auto;
+  }
+  
+  .phases-label {
+    left: 30px;
+    font-size: 14px;
+  }
+}
+
+/* Small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+  .phases-container {
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+  
+  .phases-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: auto;
+    gap: 1rem;
+  }
+  
+  .phases-label {
+    left: 20px;
+    top: -10px;
+    font-size: 12px;
+    padding: 0 6px;
+  }
+  
+  .phase-item {
+    aspect-ratio: 1/1;
+  }
+}
+
+/* Extra small devices (phones, 400px and below) */
+@media (max-width: 400px) {
+  .phases-label {
+    left: 15px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+}

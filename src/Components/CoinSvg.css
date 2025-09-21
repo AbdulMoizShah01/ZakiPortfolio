@@ -1,0 +1,43 @@
+.coin {
+  width: 100px;
+  height: 100px;
+  transition: all 2s ease-out;
+  transform-origin: center;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive sizing */
+@media (max-width: 1200px) {
+  .coin {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .coin {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coin {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .coin {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .coin {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

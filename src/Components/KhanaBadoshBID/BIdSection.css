@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+.kbid-brand-identity {
+  max-width: 900px;
+  margin: 12rem auto;
+  position: relative;
+  background: #ffffff;
+}
+
+.kbid-container {
+  font-family: "Big Shoulders", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border: solid 4px #000000;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.kbid-section-title {
+  position: absolute;
+  top: -14px;
+  left: 60px;
+  background: #fafafa;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 450;
+  letter-spacing: 1px;
+  padding: 1px 8px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+.kbid-subsection-title {
+  margin-top: 3em;
+  margin-left: 2em;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Logo Section */
+.kbid-logo-section {
+  margin-bottom: 40px;
+}
+
+.kbid-logo-display {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+}
+
+.kbid-logo-grid {
+  flex: 1;
+}
+
+.kbid-logo-construction-img {
+  width: 100%;  
+  height: 225px;
+}
+
+.kbid-logo-final {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.kbid-logo-final-img {
+  width: 100%;
+  height: 225px;
+}
+
+/* Color Palette */
+.kbid-color-section {
+  margin-bottom: 40px;
+}
+
+.kbid-color-palette {
+  margin-left: 4em;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.kbid-color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.kbid-color-swatch {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  border: 2px solid #ddd;
+}
+
+.kbid-color-code {
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+}
+
+/* Typography */
+.kbid-typography-section {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.kbid-font-list {
+  flex: 1;
+}
+
+.kbid-font-item {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #000000;
+}
+
+.kbid-typography-sample {
+  flex: 5;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.kbid-sample-text {
+  font-size: 120px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Process Section */
+.kbid-process-section {
+  margin-bottom: 40px;
+}
+
+.kbid-process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+}
+
+.kbid-process-step {
+  text-align: center;
+  padding: 20px;
+  border-right: solid 4px #000000;
+}
+
+.kbid-process-icon {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.kbid-process-svg {
+  width: 40px;
+  height: 40px;
+}
+
+.kbid-process-text {
+  font-size: 1em;
+  color: #000000;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Apparel Section */
+.kbid-apparel-section {
+  margin-bottom: 0px;
+}
+
+.kbid-apparel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  background: #000000;
+}
+
+.kbid-apparel-item {
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kbid-apparel-image {
+  width: 100%;
+  max-width: 510px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .kbid-brand-identity {
+    margin: 8rem auto;
+    max-width: 95%;
+  }
+  .kbid-container {
+    border-radius: 40px;
+  }
+  .kbid-sample-text {
+    font-size: 100px;
+  }
+  .kbid-color-palette {
+    margin-left: 2em;
+    gap: 20px;
+  }
+  .kbid-process-steps {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .kbid-brand-identity {
+    margin: 6rem auto;
+    max-width: 90%;
+  }
+  .kbid-section-title {
+    top: -12px;
+    left: 30px;
+    font-size: 18px;
+  }
+  .kbid-container {
+    border-radius: 30px;
+    border-width: 3px;
+  }
+  .kbid-subsection-title {
+    margin-left: 1.5em;
+  }
+  .kbid-logo-display {
+    flex-direction: column;
+  }
+  .kbid-typography-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .kbid-sample-text {
+    font-size: 80px;
+  }
+  .kbid-color-palette {
+    margin-left: 1.5em;
+    gap: 15px;
+    justify-content: center;
+  }
+  .kbid-process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .kbid-process-step {
+    border-right: none;
+    border-bottom: solid 3px #000000;
+  }
+  .kbid-apparel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .kbid-brand-identity {
+    margin: 4rem auto;
+    max-width: 85%;
+  }
+  .kbid-section-title {
+    top: -10px;
+    left: 20px;
+    font-size: 16px;
+    padding: 0 6px;
+    border-width: 1px;
+  }
+  .kbid-container {
+    border-radius: 20px;
+    border-width: 2px;
+  }
+  .kbid-subsection-title {
+    margin-left: 1em;
+    font-size: 16px;
+  }
+  .kbid-logo-construction-img,
+  .kbid-logo-final-img {
+    height: 180px;
+  }
+  .kbid-color-palette {
+    margin-left: 0;
+    justify-content: center;
+    gap: 10px;
+  }
+  .kbid-color-swatch {
+    width: 60px;
+    height: 60px;
+  }
+  .kbid-sample-text {
+    font-size: 60px;
+  }
+  .kbid-process-steps {
+    grid-template-columns: 1fr;
+  }
+  .kbid-process-step {
+    padding: 15px;
+  }
+  .kbid-process-svg {
+    width: 30px;
+    height: 30px;
+  }
+}

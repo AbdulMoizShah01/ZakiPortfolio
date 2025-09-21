@@ -1,0 +1,183 @@
+/* Footer Styles */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Gajraj+One&display=swap');
+
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  position: relative;
+  bottom: 0;
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 100;
+  padding: 2rem 1.5rem;
+}
+
+.footer-container {
+  max-width: 1152px;
+  /* 72rem */
+  margin: 0 auto;
+}
+
+/* Top divider */
+.footer-top-divider {
+  border-top: 1px solid #4b5563;
+  /* gray-600 */
+  margin-bottom: 2rem;
+}
+
+/* Main content layout */
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Copyright section */
+.footer-copyright {
+  font-size: 0.875rem;
+  /* 14px */
+  color: #d1d5db;
+  /* gray-300 */
+}
+
+/* Navigation sections wrapper */
+.footer-nav-wrapper {
+  display: flex;
+  gap: 4rem;
+  /* 64px */
+}
+
+/* Vertical dividers */
+.footer-divider-vertical {
+  height: 8rem;
+  /* 128px */
+  width: 1px;
+  background-color: #4b5563;
+  /* gray-600 */
+}
+
+/* Navigation columns */
+.footer-nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  /* 12px */
+}
+
+.footer-nav-link {
+  font-size: 0.875rem;
+  /* 14px */
+  color: #d1d5db;
+  /* gray-300 */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-nav-link:hover {
+  color: #ffffff;
+}
+
+.footer-btn{
+  font-size: 0.875rem;
+  /* 14px */
+  color: #d1d5db;
+  /* gray-300 */
+   font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Logo section */
+.footer-logo {
+  flex-shrink: 0;
+}
+
+.footer-logo svg {
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.footer-logo svg:hover {
+  opacity: 0.8;
+}
+
+/* Bottom divider and rights */
+.footer-bottom-divider {
+  border-top: 1px solid #4b5563;
+  /* gray-600 */
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+.footer-rights {
+  font-size: 0.75rem;
+  /* 12px */
+  color: #6b7280;
+  /* gray-500 */
+  text-align: center;
+}
+
+/* Responsive design */
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .footer-nav-wrapper {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .footer-divider-vertical {
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-nav-wrapper {
+    gap: 1.5rem;
+  }
+
+  .footer-nav-column {
+    align-items: center;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Back to top button */

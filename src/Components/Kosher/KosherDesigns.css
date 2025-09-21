@@ -1,0 +1,179 @@
+.social-media-posts {
+  max-width: 900px;
+  margin: 12rem auto;
+  position: relative;
+  border: 4px solid #000000;
+  border-radius: 30px;
+  background: #fafafa;
+}
+
+.design-label {
+  position: absolute;
+  top: -12px;
+  left: 50px;
+  z-index: 100;
+  overflow: visible !important;
+  background: #fafafa;
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1px 8px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+.post-container {
+  width: fit-content;
+  border-radius: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* Layout Containers */
+.row-single {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.row-double,
+.row-grid {
+  margin-bottom: 0 !important;
+  background: #000000;
+}
+
+.row-double {
+  display: flex;
+  gap: 0 !important;
+}
+
+.row-double .post-container {
+  width: 50% !important;
+  margin-bottom: 0;
+}
+
+.row-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Image Styling */
+.post-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Hide Decorative Elements */
+.couple-image,
+.decorative-leaves,
+.decorative-plant,
+.leaves-decoration,
+.premium-badge,
+.brush-text,
+.brush-image,
+.order-button,
+.website-url,
+.tools-images,
+.tool-item,
+.shop-button,
+.brand-name,
+.premium-text,
+.brand-logo-small,
+.order-btn,
+.shop-btn {
+  display: none !important;
+}
+
+/* Remove Background Gradients */
+.brush-post .post-content,
+.tools-banner .post-content,
+.product-card .post-content,
+.product-card.green .post-content,
+.product-card.purple .post-content,
+.product-card.white .post-content,
+.product-card.teal .post-content,
+.product-card.green-nature .post-content,
+.product-card.mint .post-content {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* Medium devices (tablets, 768px-1024px) */
+@media (max-width: 1024px) {
+  .social-media-posts {
+    max-width: 90%;
+    margin: 8rem auto;
+  }
+  
+  .design-label {
+    left: 30px;
+    font-size: 11px;
+  }
+  
+  .row-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small devices (phones, 767px and below) */
+@media (max-width: 767px) {
+  .social-media-posts {
+    max-width: 95%;
+    margin: 6rem auto;
+    border-radius: 20px;
+    border-width: 3px;
+  }
+  
+  .design-label {
+    left: 20px;
+    top: -10px;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-width: 1.5px;
+  }
+  
+  .row-single {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .row-double {
+    flex-direction: column;
+  }
+  
+  .row-double .post-container {
+    width: 100% !important;
+  }
+  
+  .row-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra small devices (phones, 480px and below) */
+@media (max-width: 480px) {
+  .social-media-posts {
+    margin: 4rem auto;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+  
+  .design-label {
+    left: 15px;
+    top: -8px;
+    font-size: 9px;
+    padding: 0 4px;
+  }
+  
+  .row-single {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}

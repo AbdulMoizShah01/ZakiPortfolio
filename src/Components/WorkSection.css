@@ -1,0 +1,554 @@
+/* WorkSection.css */
+.ws-work-container {
+  background-color: #ffffff;
+  padding: 24px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ws-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ws-p-diamond {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+.ws-t-l {
+  top: 0%;
+  left: -10%;
+}
+
+.ws-t-r {
+  top: 30%;
+  right: 10%;
+}
+
+.ws-b-l {
+  bottom: 8%;
+  left: -10%;
+}
+
+.ws-b-r {
+  bottom: 12%;
+  right: -2%;
+}
+
+.ws-browser-frame {
+  width: 1000px;
+  height: 850px;
+  margin: 0 auto;
+  background-color: white;
+  border: solid 5px #000000;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Browser Header */
+.ws-browser-header {
+  background-color: #f9fafb;
+  padding: 12px 24px;
+  border-bottom: 5px solid #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.ws-browser-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.ws-control-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.ws-control-btn.ws-close {
+  background-color: #000000;
+}
+
+.ws-control-btn.ws-minimize {
+  background-color: #707070;
+}
+
+.ws-control-btn.ws-maximize {
+  background-color: #adadad;
+}
+
+.ws-nav-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.ws-nav-arrow {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: solid 2px black;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  transition: background-color 0.2s;
+}
+
+.ws-nav-arrow:hover {
+  background-color: #d1d5db;
+}
+
+.ws-address-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ws-folder-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.ws-page-title {
+  font-weight: 900;
+  color: #000000;
+  font-size: 1.25rem;
+}
+
+/* Main Layout */
+.ws-main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.ws-sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  flex-shrink: 0;
+  border-right: 3px solid #000000;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.ws-sidebar-nav {
+  border: 1px solid #000;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.ws-category-button {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 0;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.ws-category-button:last-child {
+  border-bottom: none;
+}
+
+.ws-category-button.ws-active {
+  background-color: #000000;
+  color: white;
+}
+
+.ws-category-button:not(.ws-active) {
+  background-color: transparent;
+  color: #000000;
+}
+
+.ws-category-button:not(.ws-active):hover {
+  background-color: #f3f4f6;
+}
+
+.ws-category-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.ws-category-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ws-category-count {
+  margin-left: auto;
+  font-size: 12px;
+  background-color: #374151;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.ws-category-button.ws-active .ws-category-count {
+  background-color: #4b5563;
+}
+
+/* Content Area */
+.ws-content-area {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.ws-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  height: fit-content;
+}
+
+/* Project Cards */
+.ws-project-card {
+  position: relative;
+  background-color: white;
+  border: solid 1px #000000;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  aspect-ratio: 1;
+}
+
+.ws-project-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.ws-image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ws-project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ws-project-card:hover .ws-project-image {
+  transform: scale(1.05);
+}
+
+.ws-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ws-project-card:hover .ws-overlay {
+  opacity: 1;
+}
+
+.ws-overlay-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 16px;
+}
+
+/* Empty State */
+.ws-empty-state {
+  text-align: center;
+  padding: 48px 0;
+  grid-column: 1 / -1;
+}
+
+.ws-empty-icon {
+  width: 64px;
+  height: 64px;
+  color: #9ca3af;
+  margin: 0 auto 16px;
+}
+
+.ws-empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.ws-empty-text {
+  color: #6b7280;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1100px) {
+  .ws-work-container {
+    padding: 20px;
+  }
+  
+  .ws-browser-frame {
+    width: 95%;
+    height: auto;
+    min-height: 600px;
+    max-width: 800px;
+  }
+  
+  .ws-p-diamond {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .ws-t-l {
+    left: -15%;
+  }
+  
+  .ws-t-r {
+    right: -5%;
+  }
+  
+  .ws-b-l {
+    left: -15%;
+  }
+  
+  .ws-b-r {
+    right: -8%;
+  }
+  
+  .ws-project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .ws-sidebar {
+    width: 220px;
+  }
+  
+  .ws-category-button {
+    padding: 10px 12px;
+    font-size: 13px;
+    gap: 8px;
+  }
+  
+  .ws-content-area {
+    padding: 16px;
+  }
+}
+
+/* Small screens (large phones) */
+@media (max-width: 768px) {
+  .ws-work-container {
+    padding: 16px 12px;
+    min-height: auto;
+  }
+  
+  .ws-browser-frame {
+    width: 100%;
+    min-height: 500px;
+    border-radius: 24px;
+    border-width: 3px;
+  }
+  
+  .ws-browser-header {
+    padding: 10px 16px;
+    gap: 10px;
+    border-bottom-width: 3px;
+  }
+  
+  .ws-p-diamond {
+    display: none;
+  }
+  
+  .ws-main-content {
+    flex-direction: column;
+  }
+  
+  .ws-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 3px solid #000000;
+    max-height: none;
+  }
+  
+  .ws-sidebar-nav {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .ws-sidebar-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  
+  .ws-category-button {
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+    border-bottom: 2px solid #000;
+    border-right: 1px solid #000;
+    white-space: nowrap;
+  }
+  
+  .ws-category-button:last-child {
+    border-right: none;
+  }
+  
+  .ws-category-count {
+    display: none;
+  }
+  
+  .ws-content-area {
+    padding: 12px;
+  }
+  
+  .ws-project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .ws-overlay-title {
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+  
+  .ws-nav-arrows {
+    display: none;
+  }
+  
+  .ws-page-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .ws-work-container {
+    padding: 12px 8px;
+  }
+  
+  .ws-browser-frame {
+    border-radius: 16px;
+  }
+  
+  .ws-browser-header {
+    padding: 8px 12px;
+  }
+  
+  .ws-control-btn {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .ws-folder-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .ws-page-title {
+    font-size: 1rem;
+  }
+  
+  .ws-sidebar-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .ws-category-button {
+    min-width: 120px;
+    padding: 8px 10px;
+    font-size: 12px;
+    gap: 6px;
+  }
+  
+  .ws-category-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .ws-project-grid {
+    grid-template-columns: 2;
+    gap: 10px;
+  }
+  
+  .ws-content-area {
+    padding: 10px 8px;
+  }
+  
+  .ws-empty-state {
+    padding: 32px 0;
+  }
+  
+  .ws-empty-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .ws-empty-title {
+    font-size: 18px;
+  }
+  
+  .ws-empty-text {
+    font-size: 14px;
+    max-width: 300px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .ws-category-button {
+    min-width: 100px;
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+  
+  .ws-project-card {
+    aspect-ratio: 0.9;
+  }
+}

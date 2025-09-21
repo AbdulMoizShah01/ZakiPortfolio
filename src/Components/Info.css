@@ -1,0 +1,424 @@
+/* src/Components/Info.css */
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+.portfolio-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #ffffff;
+  overflow-x: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.pattern-diamond {
+  position: absolute;
+
+}
+
+.top-left {
+  top: 0%;
+  left: -10%;
+}
+
+.top-right {
+  top: 30%;
+  right: -10%;
+}
+
+.bottom-left {
+  bottom: -8%;
+  left: -10%;
+}
+
+.bottom-right {
+  bottom: 0%;
+  right: 5%;
+}
+
+
+
+.main-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+  padding: 2rem 0;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-container {
+  position: relative;
+}
+
+.profile-image {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+ 
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name-section {
+
+  background: #000000;
+  border-radius: 30px ;
+  text-align: center;
+  width: 100%;
+}
+
+.greeting {
+  font-family: "Big Shoulders", sans-serif;
+  background: #00000000;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.name-tag {
+  background-color: #ffffff;
+  padding: 0.1rem 4.2rem;
+  
+  border: solid 5px #000000;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.name-tag h1 {
+  font-family: "Birthstone";
+  font-size: 3.8rem;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+ 
+
+}
+
+.right-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  font-family: "Big Shoulders", sans-serif;
+  background: #000000;
+  padding:3rem 3rem;
+  font-weight: 100;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  line-height: 1.8;
+  color: #ffffff;
+  max-width: 700px;
+}
+
+.intro-paragraph {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.highlight {
+  font-family: "Big Shoulders", sans-serif;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.awards-section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: left;
+  margin-top: 5rem;
+}
+
+.awards-container {
+  margin-top: -20%;
+  padding: 1rem 1rem;
+  max-width: 450px;
+  width: 100%;
+  text-align: left;
+  
+}
+
+.awards-header {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.awards-icon {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #000000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.awards-title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+.award-title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.award-description {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+
+}
+
+  /* Responsive design */
+        @media (max-width: 1200px) {
+            .main-content {
+                gap: 3rem;
+            }
+            
+            .profile-image {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .awards-container {
+                margin-top: -15%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .left-section {
+                margin-bottom: 1rem;
+            }
+            
+            .name-tag h1 {
+                font-size: 3rem;
+            }
+            
+            .awards-section {
+                margin-top: 3rem;
+                justify-content: center;
+            }
+            
+            .awards-container {
+                margin-top: 0;
+            }
+            
+            .pattern-diamond {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-container {
+                padding: 1.5rem;
+            }
+            
+            .profile-image {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .greeting {
+                font-size: 1.8rem;
+            }
+            
+            .name-tag {
+                padding: 0.1rem 2.5rem;
+            }
+            
+            .name-tag h1 {
+                font-size: 2.8rem;
+            }
+            
+            .description {
+                padding: 2rem;
+                font-size: 1.3rem;
+            }
+            
+            .awards-container {
+                padding: 1.5rem;
+            }
+            
+            .awards-title {
+                font-size: 1.8rem;
+            }
+            
+            .award-title {
+                font-size: 1.3rem;
+            }
+            
+            .pattern-diamond {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .top-left {
+                left: -15%;
+            }
+            
+            .top-right {
+                right: -15%;
+            }
+            
+            .bottom-left {
+                left: -15%;
+            }
+            
+            .bottom-right {
+                right: -5%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-container {
+                padding: 1rem;
+            }
+            
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .name-section {
+                padding: 1rem;
+            }
+            
+            .greeting {
+                font-size: 1.6rem;
+            }
+            
+            .name-tag {
+                padding: 0.1rem 2rem;
+            }
+            
+            .name-tag h1 {
+                font-size: 2.3rem;
+            }
+            
+            .description {
+                padding: 1.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .intro-paragraph {
+                font-size: 1.2rem;
+            }
+            
+            .awards-container {
+                padding: 1.25rem;
+            }
+            
+            .awards-title {
+                font-size: 1.6rem;
+            }
+            
+            .award-title {
+                font-size: 1.2rem;
+            }
+            
+            .award-description {
+                font-size: 0.9rem;
+            }
+            
+            .pattern-diamond {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .top-left {
+                left: -20%;
+            }
+            
+            .top-right {
+                right: -20%;
+            }
+            
+            .bottom-left {
+                bottom: -10%;
+                left: -20%;
+            }
+            
+            .bottom-right {
+                right: -10%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .name-tag h1 {
+                font-size: 2rem;
+            }
+            
+            .greeting {
+                font-size: 1.4rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+                padding: 1.2rem;
+            }
+            
+            .awards-title {
+                font-size: 1.4rem;
+            }
+            
+            .award-title {
+                font-size: 1.1rem;
+            }
+            
+            .pattern-diamond {
+                display: none;
+            }
+        }

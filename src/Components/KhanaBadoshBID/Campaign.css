@@ -1,0 +1,109 @@
+ @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+.campaign {
+
+  max-width: 900px;
+  margin: 12rem auto;
+  position: relative;
+}
+
+.campaign-container {
+  font-family: "Big Shoulders", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: solid 4px #000000;
+  border-radius: 50px;
+ 
+}
+.kbid-section-title {
+  position: absolute;
+  top: -15px;
+  left: 60px;
+  background: #fafafa;
+  color: #000000;
+  font-size: 20px;
+ font-weight: 450;
+  letter-spacing: 1px;
+  padding: 1px 8px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+.campaign-wrapp{
+border-radius: 50px;
+};
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0px;
+  
+}
+
+.campaign-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.campaign-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  
+}
+
+
+@media (max-width: 1024px) {
+  .campaign {
+    margin: 8rem auto;
+    max-width: 95%;
+  }
+  .campaign-container {
+    border-radius: 40px;
+  }
+  .campaign-wrapp {
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .campaign {
+    margin: 6rem auto;
+    max-width: 90%;
+  }
+  .kbid-section-title {
+    top: -15px;
+    left: 30px;
+    font-size: 18px;
+    padding: 0 6px;
+  }
+  .campaign-container {
+    border-radius: 30px;
+    border-width: 3px;
+  }
+  .campaign-wrapp {
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .campaign {
+    margin: 4rem auto;
+    max-width: 85%;
+  }
+  .kbid-section-title {
+    top: -10px;
+    left: 20px;
+    font-size: 16px;
+    padding: 0 4px;
+    border-width: 1px;
+  }
+  .campaign-container {
+    border-radius: 20px;
+    border-width: 2px;
+  }
+  .campaign-wrapp {
+    border-radius: 20px;
+  }
+}

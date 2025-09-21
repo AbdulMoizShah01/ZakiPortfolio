@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
+.contribution-section {
+  margin-left: 15%;
+  max-width: 400px;
+  font-family: "Big Shoulders", sans-serif;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.section-header {
+  margin-bottom: 16px;
+}
+
+.section-header h3 {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.contribution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.contribution-list li {
+  font-size: 20px;
+  margin-bottom: 6px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.contribution-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.software-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.software-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  border: 2px solid #000000;
+}
+
+.ps-icon {
+  background-color: #000000;
+}
+
+.ai-icon {
+  background-color: #000000;
+}
+
+.software-icon span {
+  font-family: 'Adobe Clean', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Medium devices (tablets, 768px-1024px) */
+@media (max-width: 1024px) {
+  .contribution-section {
+    margin-left: 10%;
+    max-width: 350px;
+  }
+  
+  .section-header h3 {
+    font-size: 22px;
+  }
+  
+  .contribution-list li {
+    font-size: 18px;
+  }
+  
+  .software-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+
+/* Small devices (phones, 767px and below) */
+@media (max-width: 767px) {
+  .contribution-section {
+    margin-left: 5%;
+    max-width: 90%;
+  }
+  
+  .section-header h3 {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+  
+  .contribution-list li {
+    font-size: 16px;
+  }
+  
+  .software-icons {
+    gap: 10px;
+  }
+  
+  .software-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+    border-radius: 8px;
+  }
+}
+
+/* Extra small devices (phones, 480px and below) */
+@media (max-width: 480px) {
+  .contribution-section {
+    margin-top: -10rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85%;
+  }
+  
+  .section-header h3 {
+    font-size: 18px;
+  }
+  
+  .contribution-list li {
+    font-size: 15px;
+  }
+  
+  .software-icons {
+    justify-content: left;
+  }
+  
+  .software-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}

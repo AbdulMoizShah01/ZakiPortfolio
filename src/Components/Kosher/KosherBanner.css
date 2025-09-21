@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
+.banner-container {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 0 20px;
+}
+
+.ki-banner-container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 0 20px;
+}
+
+
+.image-container-kbid {
+  position: absolute;
+  top: 245%;
+  margin-left: -5rem;
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+}
+
+.image-container-td{
+  position: absolute;
+  top: 100%;
+  margin-left: 8rem;
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+}
+
+.image-container-kbid img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.image-container-td img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+.back-button {
+  position: absolute;
+  left: 250px;
+  top: 20px;
+  z-index: 10;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 9rem auto;
+}
+
+.heading {
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 999;
+  font-size: 5rem;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.image-container {
+  position: absolute;
+  top: 230%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+}
+
+.ka-image-container {
+  position: absolute;
+  top: 300%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+}
+
+.image-container-kbid {
+  position: absolute;
+  top: 245%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+}
+
+.image-container-td {
+  position: absolute;
+  top: 245%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  height: fit-content;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .back-button {
+    left: 100px;
+  }
+  
+  .heading {
+    font-size: 4rem;
+  }
+  
+  .image-container,
+  .ka-image-container,
+  .image-container-kbid,
+  .image-container-td {
+    max-width: 600px;
+    height: 700px;
+    top: 200%;
+  }
+  
+  .ka-image-container {
+    top: 250%;
+    left: 55%;
+  }
+  
+  .image-container-kbid {
+    top: 220%;
+    left: 55%;
+  }
+  
+  .image-container-td {
+    top: 220%;
+    left: 45%;
+  }
+}
+
+/* Small devices (phones, 767px and down) */
+@media (max-width: 767px) {
+  .back-button {
+    position: static;
+    margin: 20px 0;
+    align-self: flex-start;
+    left: 0;
+  }
+  
+  .banner-container {
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+  
+  .ki-banner-container {
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+  
+  .main-content {
+    margin: 5rem auto;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    padding: 15px;
+  }
+  
+  .image-container,
+  .ka-image-container,
+  .image-container-kbid,
+  .image-container-td {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+  
+  .image-container-td {
+    height: fit-content;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .ki-banner-container{
+    margin-top: 5rem;
+  }
+  
+  .main-content {
+    margin: 3rem auto;
+  }
+  
+  .image-container
+  {
+    margin-top: -35%;
+  }
+  .ka-image-container,
+  .image-container-kbid
+  {
+    margin-top: -30%;
+  }
+  .image-container-td {
+    
+    margin: -5rem 2rem;
+  }
+
+}
