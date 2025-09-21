@@ -4,7 +4,7 @@ function JojoBanner() {
   const navigateTo=useNavigate();
   const goBack=()=>navigateTo(-1);
   return(
-    <div className="banner-container">
+    <div className="ki-banner-container">
       <div className="back-button">
         <img src="/Assets/backbutton.svg" alt="Back button" onClick={goBack}/>
       </div>

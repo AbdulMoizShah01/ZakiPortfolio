@@ -2,7 +2,7 @@ import '../Kosher/Contribution.css';
 
 const JojoContribution = () => {
   return (
-    <div className="contribution-section">
+    <div className="contribution-section" style={{marginTop:"10%"}}>
       <div className="section-header">
         <h3>My Role</h3>
       </div>

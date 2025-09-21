@@ -1,6 +1,6 @@
 
-import '../Jugaad/VideoSection.css';
-const SabarVideo = () => {
+import "../Jugaad/VideoSection.css";
+const KaVideo = () => {
 
     return(
         <div class="jugaad-video-section">  
@@ -11,7 +11,7 @@ const SabarVideo = () => {
             <div class="jugaad-video-container">
             <div class="jugaad-video-frame">
                 <iframe class="jugaad-video-iframe" 
-                        src="https://www.youtube.com/embed/4_j6hG4y6f0"
+                        src="https://www.youtube.com/embed/-bbHAPjUtx8"
                         title="JUGAAD - Robot Adventures"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
@@ -27,4 +27,4 @@ const SabarVideo = () => {
 
 };
 
-export default SabarVideo;
+export default KaVideo;

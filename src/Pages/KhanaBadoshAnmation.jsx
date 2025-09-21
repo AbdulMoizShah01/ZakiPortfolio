@@ -1,8 +1,9 @@
 import KABanner from "../Components/KhanaBadoshAnimation/KABanner";
 import KAContribution from "../Components/KhanaBadoshAnimation/KAContribution";
 import KADescription from "../Components/KhanaBadoshAnimation/KADescription";
+import KaVideo from "../Components/KhanaBadoshAnimation/KaVideo";
 import ConnectSection from "../Components/Kosher/ConnectSection";
-import SabarVideo from "../Components/Sabar/SabarVideo";
+
 import "../Pages/Pages.css";
 import ScrollToTop from "./ScrollToTop";
 
@@ -23,7 +24,7 @@ function KhanaBadoshAnimation (){
         <KABanner/>
         <KADescription/>
         <KAContribution/>
-        <SabarVideo/>
+       <KaVideo/>
         <ConnectSection/>
       </div>
 

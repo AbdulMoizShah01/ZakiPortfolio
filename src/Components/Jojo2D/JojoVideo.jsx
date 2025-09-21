@@ -11,7 +11,7 @@ const JojoVideo = () => {
             <div class="jugaad-video-container">
             <div class="jugaad-video-frame">
                 <iframe class="jugaad-video-iframe" 
-                        src="https://www.youtube.com/embed/"
+                        src="https://www.youtube.com/embed/TDYXiwWMvcY"
                         title="JUGAAD - Robot Adventures"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>

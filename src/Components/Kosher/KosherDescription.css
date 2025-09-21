@@ -122,6 +122,10 @@
          
           }
 
+          .jojo-project-description-container{
+            margin-top: 350px !important;
+          }
+
           .title-badge {
             left: 15px;
             padding: 8px 16px;

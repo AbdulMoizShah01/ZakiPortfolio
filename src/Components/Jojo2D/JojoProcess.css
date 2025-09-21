@@ -1,13 +1,10 @@
 .jojo-process-container {
   background: #ffffff;
-  
   padding: 0;
   max-width: 900px;
   margin: 10rem auto;
   position: relative;
 }
-
-
 
 .jojo-process-title {
   z-index: 500;
@@ -28,11 +25,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-    height: 600px;
+  height: 600px;
   width: fit-content;
   border: solid 4px #000;
   border-radius: 20px;
-   overflow: hidden;
+  overflow: hidden;
 }
 
 .jojo-grid-item {
@@ -45,13 +42,10 @@
   justify-content: center;
 }
 
-
 .jojo-bottom-panel {
   grid-column: 1 / 3;
   background: white;
 }
-
-
 
 .jojo-process-image {
   max-width: 100%;
@@ -67,14 +61,63 @@
   justify-content: center;
 }
 
-/* Responsive design */
+/* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
   .jojo-process-container {
+    margin: 6rem auto;
     max-width: 95%;
   }
-  
+
+  .jojo-process-title {
+    left: 30px;
+    font-size: 14px;
+  }
+
   .jojo-image-grid {
     height: 400px;
-    padding: 50px 15px 15px 15px;
+    border-radius: 16px;
+  }
+}
+
+/* Small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+  .jojo-process-container {
+    margin: 4rem auto;
+    max-width: 100%;
+  }
+
+  .jojo-process-title {
+    left: 20px;
+    top: -10px;
+    font-size: 12px;
+    padding: 0 6px;
+  }
+
+  .jojo-image-grid {
+    height: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 12px;
+  }
+
+  .jojo-bottom-panel {
+    grid-column: 1;
+  }
+
+  .jojo-grid-item {
+    min-height: 100px;
+  }
+}
+
+/* Extra small devices (phones, 360px and down) */
+@media (max-width: 360px) {
+  .jojo-process-title {
+    left: 15px;
+    font-size: 11px;
+  }
+
+  .jojo-image-grid {
+    height: 320px;
+    border-width: 3px;
   }
 }

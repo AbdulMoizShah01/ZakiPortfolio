@@ -164,6 +164,9 @@
 }
 
 @media (max-width: 480px) {
+  .profile-card-container{
+    width: 100%;
+  }
   .profile-title {
     font-size: 1.8rem;
   }
@@ -173,7 +176,7 @@
   }
   
   .avatar-container {
-    width: 40%;
-    left: 5%;
+    width: 28%;
+    left: 10%;
   }
 }
