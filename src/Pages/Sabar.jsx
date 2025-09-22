@@ -14,7 +14,7 @@ function Sabar (){
      <div className="app-container">
       {/* Left Border */}
       <div className="border-svg left-border">
-       <img src='/Assets/SidelineLeft.svg'/>
+       <img src='/Jugaad/jugaad-s-left.svg'/>
   
       </div>
 
@@ -30,7 +30,7 @@ function Sabar (){
 
       {/* Right Border */}
       <div className="border-svg right-border">
-       <img src='/Assets/SidlineRight.svg'/>
+       <img src='/Jugaad/jugaad-s-right.svg'/>
       </div>
     </div>
     </>

@@ -15,7 +15,7 @@ function KhanaBadoshAnimation (){
      <div className="app-container">
       {/* Left Border */}
       <div className="border-svg left-border">
-       <img src='/Assets/SidelineLeft.svg'/>
+       <img src='/Jojo2D/jojo-s-left.svg'/>
   
       </div>
 
@@ -30,7 +30,7 @@ function KhanaBadoshAnimation (){
 
       {/* Right Border */}
       <div className="border-svg right-border">
-       <img src='/Assets/SidlineRight.svg'/>
+       <img src='/Jojo2D/jojo-s-right.svg'/>
       </div>
     </div>
     </>

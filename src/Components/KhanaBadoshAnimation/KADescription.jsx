@@ -2,7 +2,7 @@ import React from 'react';
 import '../Kosher/KosherDescription.css';
 const KADescription = () => {
   return (
-    <div className="ki-project-description-container">
+    <div className="ka-project-description-container">
       <div className="description-card">
         <div className="title-badge">
           <h2 className="section-title">Project Description</h2>

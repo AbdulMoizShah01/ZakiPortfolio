@@ -15,7 +15,7 @@ function Jugaad3D (){
      <div className="app-container">
       {/* Left Border */}
       <div className="border-svg left-border">
-       <img src='/Assets/SidelineLeft.svg'/>
+       <img src='/Jugaad/jugaad-s-left.svg'/>
   
       </div>
 
@@ -31,7 +31,7 @@ function Jugaad3D (){
 
       {/* Right Border */}
       <div className="border-svg right-border">
-       <img src='/Assets/SidlineRight.svg'/>
+       <img src='/Jugaad/jugaad-s-right.svg'/>
       </div>
     </div>
     </>
